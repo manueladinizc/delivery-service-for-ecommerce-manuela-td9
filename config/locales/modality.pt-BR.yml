@@ -1,0 +1,18 @@
+pt-BR:    
+  activerecord:
+    models:
+      modality: 
+        one: Modalidade
+        other: Modalidades     
+    attributes:
+      modality:
+        name: "Nome"     
+        minimum_distance: "Distância mínima"     
+        maximum_distance: "Distância máxima"     
+        minimum_weight: "Peso mínimo"     
+        maximum_weight: "Peso máximo"     
+        flat_rate: "Taxa fixa"     
+        modality_status: "Status" 
+        activated: "Ativo"
+        disabled: "Desativado"   
+        

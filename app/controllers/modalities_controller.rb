@@ -1,0 +1,3 @@
+class ModalitiesController < ApplicationController
+    
+end

@@ -30,3 +30,20 @@ describe 'Usuário visita tela inicial' do
         expect(page).to have_content('Não existe modalidades de transporte cadastradas')
     end
 end
+
+describe 'Usuário vê detalhes de uma modalidade' do
+    it 'e vê informações adicionais' do
+        #Arrange
+        Modality.create!(name: 'Same day delivery', minimum_distance: 3, maximum_distance:10, minimum_weight:0, maximum_weight:20, flat_rate:10, modality_status: "disabled")
+        #Act
+        visit root_path
+        #Assert
+        expect(page).to have_content('Same day delivery')
+        expect(page).to have_content("Distância mínima:\n3km")
+        expect(page).to have_content("Distância máxima:\n10km")
+        expect(page).to have_content("Peso mínimo:\n0kg")
+        expect(page).to have_content("Peso máximo:\n20kg")
+        expect(page).to have_content("Taxa fixa:\nR$10")
+        expect(page).to have_content("Desativado")
+    end
+end
