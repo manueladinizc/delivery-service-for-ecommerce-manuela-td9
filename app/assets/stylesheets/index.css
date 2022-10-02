@@ -9,10 +9,11 @@ p {
 }
 .container-card {
     display: flex;
-    justify-content: center;
+   flex-wrap: wrap;
+   justify-content: space-between;
 }
 
 .card {
-    margin:10px;
+    margin:30px;
 
 }
