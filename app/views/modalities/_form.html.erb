@@ -1,3 +1,15 @@
+<% if(@modality.errors.any?) %>
+  <div class="alertField">
+    <div class = "alert alert-warning">
+    <p>Verifique os erros abaixo:</p>    
+    <% @modality.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>  
+    <% end %>    
+    </div>
+  </div>
+<% end %>
+
+
 
 <%= form_with(model: @modality) do |f| %>
 
@@ -28,7 +40,7 @@
         </div>
         <div class="form-group col-md-2">
         <%= f.label :modality_status %> <br>
-        <%= f.select :modality_status, Modality.modality_statuses.keys.map { |s| [s.humanize, s]}, {class: "form-control"}   %> 
+        <%= f.select :modality_status, Modality.modality_statuses.keys, {class: "form-control"} %>
     
         </div>       
         <div class="btn-form-modality">        
