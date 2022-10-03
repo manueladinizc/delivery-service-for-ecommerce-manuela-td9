@@ -23,7 +23,7 @@
         </ul>
         <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Ativo</a>
+          <a class="nav-link active" href="<%= new_user_adm_session_path %>">Entrar</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -41,6 +41,21 @@
       </nav>
     </header>
     <main>    
+    
+    <% if user_adm_signed_in? %> 
+      <div>
+        <div class="btn-sair">
+          <div class="txt-email"><%= current_user_adm.email %> </div>  
+            <%= button_to 'Sair', destroy_user_adm_session_path, method: :delete, class: 'btn btn-dark btn-xs' %>
+          </div>
+      </div>   
+    <% end %>
+
+
+
+
+
+
       <% if flash[:notice] -%>
         <div class="alertField">
         <div class = "alert alert-primary"><%= flash[:notice] %></div>

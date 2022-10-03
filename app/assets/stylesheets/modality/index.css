@@ -27,3 +27,19 @@ p {
     position: relative;
     left: 30px;    
 }
+
+.btn-sair{
+    display: flex;    
+    justify-content: flex-end;
+    position: relative;
+    right: 20px; 
+    margin: 10px; 
+}
+
+.txt-email{
+    display: flex;    
+    justify-content: flex-end;
+    position: relative;
+    right: 20px; 
+    margin: 7px;
+}
