@@ -1,0 +1,10 @@
+.container-form-modality{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   margin: 20px;
+}
+.btn-form-modality{
+    position: relative;
+    left: 17px;    
+}

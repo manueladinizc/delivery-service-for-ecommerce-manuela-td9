@@ -10,15 +10,20 @@ p {
 .container-card {
     display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
+   justify-content: flex-start;
+   
 }
 
 .card {
     margin:30px;
-
 }
 
-.alertEmpty{
+.alertField{
     margin: 30px;
     text-align: center;
+}
+
+.btnAdd {
+    position: relative;
+    left: 30px;    
 }

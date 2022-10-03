@@ -40,16 +40,20 @@
       </ul>
       </nav>
     </header>
-    <main>
-      
-      
+    <main>    
+      <% if flash[:notice] -%>
+        <div class="alertField">
+        <div class = "alert alert-primary"><%= flash[:notice] %></div>
+        </div>
+      <% elsif flash[:alert] -%> 
+        <div class="alertField">
+        <div class = "alert alert-info"><%= flash[:alert] %></div>
+        </div>
+      <% end %>       
+         
+      <%= yield %>
 
-      <div>
-        <%= alert %>
-        <%= notice %>
-      </div>
-    <%= yield %>
     </main>
-  </body>
+</body>
 
 </html>

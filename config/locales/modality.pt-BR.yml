@@ -1,4 +1,6 @@
-pt-BR:    
+pt-BR:
+  activated: "Ativo"
+  disabled: "Desativado"    
   activerecord:
     models:
       modality: 
