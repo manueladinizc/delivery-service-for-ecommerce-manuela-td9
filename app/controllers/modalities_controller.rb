@@ -2,6 +2,10 @@ class ModalitiesController < ApplicationController
 
     before_action :set_modality, only: [:edit, :update]
 
+    def index
+        @modalities = Modality.all
+    end
+
     def new
         @modality = Modality.new
     end
@@ -9,7 +13,7 @@ class ModalitiesController < ApplicationController
     def create
         @modality = Modality.new(modality_params)
         if @modality.save()
-            redirect_to root_path, notice: 'Modalidade cadastrado com sucesso.'
+            redirect_to modalities_path, notice: 'Modalidade cadastrado com sucesso.'
         else
             flash.now[:notice] = 'Modalidade não cadastrado.'
             render 'new'
@@ -22,7 +26,7 @@ class ModalitiesController < ApplicationController
     def update
         
         if @modality.update(modality_params)
-            redirect_to root_path, notice: 'Modalidade atualizado com sucesso'
+            redirect_to modalities_path, notice: 'Modalidade atualizado com sucesso'
             else
                 flash.now[:notice] = 'Não foi possível atualizar Modalidade'
                 render 'edit'

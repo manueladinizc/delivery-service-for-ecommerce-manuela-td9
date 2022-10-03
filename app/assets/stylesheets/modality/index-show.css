@@ -43,3 +43,17 @@ p {
     right: 20px; 
     margin: 7px;
 }
+
+.btn-container-index{     
+    margin: 2px auto 0 auto;			
+	width: 500px;		
+	display: flex;                  
+	flex-direction: column;         
+	justify-content: center;    
+		
+}
+
+.btn-item{
+    margin: 15px;
+    width: 500px;
+}

@@ -1,48 +1,16 @@
-<nav class="navbar bg-white">
-  <div class="container-fluid">
-    <a class="navbar-brand" >
-      Modalidades de Transporte
-    </a>
-  </div>
-</nav>
 
-<div class="btnAdd">
-<a class="btn btn-secondary" href="<%= new_modality_path %>" role="button">Adicionar Nova Modalidade</a>
-</div>
-<% if @modalities.empty? %>
-  <div class="alertField">
-  <div class="alert alert-warning" role="alert">
-  Não existe modalidades de transporte cadastradas
+<div class="btn-container-index">
+  <div class="btn-item">
+  <a class="btn btn-primary btn-lg btn-block" href="<%= new_user_adm_session_path %>" role="button">Log in como usuário administrador</a>
   </div>
-  </div>
-<% elsif %>
-<div class = container-card>  
-  <% @modalities.each do |m| %>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title"><%= m.name %></h5>
-          <% if m.modality_status == "activated" %>
-            <span class="badge badge-success"><%= Modality.human_attribute_name(:activated) %></span>
-          <% else %>  
-            <span class="badge badge-danger"><%= Modality.human_attribute_name(:disabled)%></span>
-          <% end %>
-          <br>
-        <strong><%= Modality.human_attribute_name(:minimum_distance)%>:</strong>
-        <p class="card-text"><%= m.minimum_distance %>km</p>
-        <strong><%= Modality.human_attribute_name(:maximum_distance)%>:</strong>
-        <p class="card-text"><%= m.maximum_distance %>km</p>
-        <strong><%= Modality.human_attribute_name(:minimum_weight)%>:</strong>
-        <p class="card-text"><%= m.minimum_weight %>kg</p>
-        <strong><%= Modality.human_attribute_name(:maximum_weight)%>:</strong>
-        <p class="card-text"><%= m.maximum_weight %>kg</p>
-        <strong><%= Modality.human_attribute_name(:flat_rate)%>:</strong>
-        <p class="card-text">R$<%= m.flat_rate %></p>
-                    
-        <a href="<%= edit_modality_path(m.id) %>" class="btn btn-primary">Editar</a>
-    </div>
-  </div>
-<% end %>
-</div>
-</div>  
-<% end %>
 
+  <div class="btn-item">
+  <a class="btn btn-secondary btn-lg btn-block" href="#" role="button">Log in como usuário regular </a>
+  </div>
+
+  <div class="btn-item">
+  <a class="btn btn-success btn-lg btn-block" href="#" role="button">Consultar entrega</a>
+  </div>
+
+  
+</div>
