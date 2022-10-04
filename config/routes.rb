@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :user_regulars
   devise_for :user_adms
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
