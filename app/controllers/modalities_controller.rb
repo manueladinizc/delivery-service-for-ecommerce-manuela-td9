@@ -1,6 +1,16 @@
 class ModalitiesController < ApplicationController
 
     before_action :set_modality, only: [:edit, :update]
+    
+    def authenticate!
+  if @current_user == user_admin 
+      authenticate_user_admin!
+  elsif @current_user == user_regular
+      authenticate_user_regular!
+  end
+end
+    
+    
 
     def index
         @modalities = Modality.all
@@ -32,6 +42,10 @@ class ModalitiesController < ApplicationController
                 render 'edit'
             end
     end
+
+
+
+
 
     private
     def set_modality 

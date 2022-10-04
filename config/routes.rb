@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: 'home#index'
   resources :modalities, only: [:index, :new, :create, :edit, :update]
+
+ 
 end

@@ -20,6 +20,7 @@
           <img src="/assets/local_shipping.svg" width="30" height="30" class="d-inline-block align-top" alt="">          
           Sistema de Frete        
           </a>
+      <% if user_adm_signed_in? || user_regular_signed_in? %> 
         </ul>
         <ul class="nav justify-content-end">
         <li class="nav-item">
@@ -38,6 +39,9 @@
           <a class="nav-link disabled" href="#">mais</a>
         </li>
       </ul>
+      <% end %>
+    
+
       </nav>
     </header>
     <main>    
@@ -47,6 +51,15 @@
         <div class="btn-sair">
           <div class="txt-email"><%= current_user_adm.email %> </div>  
             <%= button_to 'Sair', destroy_user_adm_session_path, method: :delete, class: 'btn btn-dark btn-xs' %>
+          </div>
+      </div>   
+    <% end %>
+
+    <% if user_regular_signed_in? %> 
+      <div>
+        <div class="btn-sair">
+          <div class="txt-email"><%= current_user_regular.email %> </div>  
+            <%= button_to 'Sair', destroy_user_regular_session_path, method: :delete, class: 'btn btn-dark btn-xs' %>
           </div>
       </div>   
     <% end %>

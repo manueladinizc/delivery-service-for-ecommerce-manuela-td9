@@ -5,8 +5,17 @@ describe 'Usuário cadastra uma modalidade' do
         #Arrange
         user = UserAdm.create!(name: 'Manuela', email: 'manuela@sistemadefrete.com.br', password: 'password')
         #Act
-        login_as(user)
+        # login_as(user)
+        # visit root_path
+        # click_on 'Modalidades'
+        # click_on 'Adicionar Nova Modalidade'
         visit root_path
+        click_on 'Entrar como usuário administrador'
+        within('form') do
+            fill_in 'E-mail', with: 'manuela@sistemadefrete.com.br'
+            fill_in 'Senha', with: 'password'
+            click_on 'Entrar'
+        end
         click_on 'Modalidades'
         click_on 'Adicionar Nova Modalidade'
         #Assert
@@ -23,8 +32,16 @@ describe 'Usuário cadastra uma modalidade' do
         #Arrange
         user = UserAdm.create!(name: 'Manuela', email: 'manuela@sistemadefrete.com.br', password: 'password')
         #Act
-        login_as(user)
+        # login_as(user)
+        # visit root_path
+        # click_on 'Modalidades'
         visit root_path
+        click_on 'Entrar como usuário administrador'
+        within('form') do
+            fill_in 'E-mail', with: 'manuela@sistemadefrete.com.br'
+            fill_in 'Senha', with: 'password'
+            click_on 'Entrar'
+        end
         click_on 'Modalidades'
         click_on 'Adicionar Nova Modalidade'
         
@@ -48,8 +65,17 @@ describe 'Usuário cadastra uma modalidade' do
         #Arrange
         user = UserAdm.create!(name: 'Manuela', email: 'manuela@sistemadefrete.com.br', password: 'password')
         #Act
-        login_as(user)
+        # login_as(user)
+        # visit root_path
+        # click_on 'Modalidades'
+        # click_on 'Adicionar Nova Modalidade'
         visit root_path
+        click_on 'Entrar como usuário administrador'
+        within('form') do
+            fill_in 'E-mail', with: 'manuela@sistemadefrete.com.br'
+            fill_in 'Senha', with: 'password'
+            click_on 'Entrar'
+        end
         click_on 'Modalidades'
         click_on 'Adicionar Nova Modalidade'
         fill_in 'Nome', with: ''
