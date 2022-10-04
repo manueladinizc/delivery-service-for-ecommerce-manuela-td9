@@ -3,10 +3,11 @@ require 'rails_helper'
 describe 'Usuário cadastra uma modalidade' do
     it 'a partir da tela inicial' do
         #Arrange
-        
+        user = UserAdm.create!(name: 'Manuela', email: 'manuela@sistemadefrete.com.br', password: 'password')
         #Act
+        login_as(user)
         visit root_path
-        click_on 'Sistema de Frete'
+        click_on 'Modalidades'
         click_on 'Adicionar Nova Modalidade'
         #Assert
         expect(page).to have_field('Nome')
@@ -20,10 +21,11 @@ describe 'Usuário cadastra uma modalidade' do
 
     it 'com sucesso' do
         #Arrange
-        
+        user = UserAdm.create!(name: 'Manuela', email: 'manuela@sistemadefrete.com.br', password: 'password')
         #Act
+        login_as(user)
         visit root_path
-        click_on 'Sistema de Frete'
+        click_on 'Modalidades'
         click_on 'Adicionar Nova Modalidade'
         
         fill_in 'Nome', with: 'Same day delivery'
@@ -35,7 +37,7 @@ describe 'Usuário cadastra uma modalidade' do
         select "activated", from: 'Status'
         click_on 'Enviar'
         #Assert
-        expect(current_path).to eq root_path
+        expect(current_path).to eq modalities_path
         expect(page).to have_content 'Modalidade cadastrado com sucesso.'
         expect(page).to have_content 'Same day delivery'
         expect(page).to have_content 'Ativo'
@@ -44,10 +46,11 @@ describe 'Usuário cadastra uma modalidade' do
         
     it 'com dados incompletos' do
         #Arrange
-        
+        user = UserAdm.create!(name: 'Manuela', email: 'manuela@sistemadefrete.com.br', password: 'password')
         #Act
+        login_as(user)
         visit root_path
-        click_on 'Sistema de Frete'
+        click_on 'Modalidades'
         click_on 'Adicionar Nova Modalidade'
         fill_in 'Nome', with: ''
         fill_in 'Taxa fixa', with: 10
