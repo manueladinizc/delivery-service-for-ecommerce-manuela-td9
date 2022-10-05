@@ -6,39 +6,22 @@
   </div>
 </nav>
 
- <div class="form-group">
-<%= form_with(url: search_vehicles_path, method: :get) do |f| %>
-        <div class="container-search">
-          <div class="search-title">
-          <%= f.label :query, 'Buscar Veículo:',  {class:"form-label"}%>
-          </div>
+<nav class="navbar bg-white">
+  <div class="container-fluid">
+    <a class="navbar-brand" >
+      Resultado da Busca por: <%= @registration_plate %>
+    </a>
+  </div>
+</nav>
 
-          <div class="search-field">
-          <%= f.text_field :query, class:"form-control", placeholder: "Digite númedo de registro..." %>
-          </div> 
-          <div>         
-          <%= f.submit 'Buscar', {class:"btn btn-outline-success" }%>
-        </div>
-        </div>
-<% end %> 
+<div class="alert-search">
+<div class="alert alert-light" >
+  <strong><%= @vehicles.count %> <%= Vehicle.model_name.human(count: @vehicles.count).downcase %> <%= I18n.translate(:found, count: @vehicles.count) %></strong>
+</div>
 </div>
 
-
-<% if user_adm_signed_in? %>
-<div class="btnAdd">
-<a class="btn btn-primary" href="<%= new_vehicle_path %>" role="button">Adicionar Novo Veículo</a>
-</div>
-<% end %>
-
-<% if @vehicles.empty? %>
-  <div class="alertField">
-  <div class="alert alert-warning" role="alert">
-  Não existe veículos cadastradas
-  </div>
-  </div>
-<% elsif %>
 <div class = container-card>  
-  <% @vehicles.each do |v| %>
+    <% @vehicles.each do |v| %>
   <div class="card" style="width: 18rem;">
     <div class="card-body">
         <h5 class="card-title"><%= v.car_model %></h5>
@@ -65,6 +48,3 @@
   </div>
 <% end %>
 </div>
-</div>  
-<% end %>
-

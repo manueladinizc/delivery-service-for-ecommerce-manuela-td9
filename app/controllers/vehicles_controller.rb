@@ -39,6 +39,11 @@ class VehiclesController < ApplicationController
             end
     end
 
+    def search
+        @registration_plate = params["query"]
+        @vehicles = Vehicle.where("registration_plate LIKE ?", "%#{@registration_plate}%" )
+    end
+
 
 
 

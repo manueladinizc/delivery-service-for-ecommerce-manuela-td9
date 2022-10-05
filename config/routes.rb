@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
   resources :modalities, only: [:index, :new, :create, :edit, :update]
-  resources :vehicles, only: [:index, :new, :create, :edit, :update]
+  resources :vehicles, only: [:index, :new, :create, :edit, :update] do
+    get 'search', on: :collection
+  end
 
  
 end

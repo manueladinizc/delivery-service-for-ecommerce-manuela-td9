@@ -1,0 +1,27 @@
+.search-field{
+    width: 350px;
+    
+}
+
+.container-search{
+    display: flex;
+    flex-direction: row;
+    margin: 2px auto 0 auto;			
+	width: 700px;		
+	display: flex;                  
+	        
+	justify-content: center;
+}
+
+.search-title{
+    margin: 6px;
+    font-weight: bold;
+    color: rgb(128, 126, 126);
+    
+}
+
+.alert-search{
+    margin: 15px;
+    text-align: start;
+    color:rgb(32, 17, 203)
+}
