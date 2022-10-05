@@ -1,0 +1,21 @@
+pt-BR:
+  operation: "Em operação"
+  maintenance: "Em manutenção"    
+  activerecord:
+    models:
+      vehicle: 
+        one: Veículo
+        other: Veículos     
+    attributes:
+      vehicle:
+        registration_plate: "Número de registro"     
+        brand: "Marca"     
+        car_model: "Modelo"     
+        model_year: "Ano"     
+        weight_capacity: "Capacidade de peso máxima"     
+        car_status: "Status"
+        operation: "Em operação"
+        maintenance: "Em manutenção" 
+        modality_id: "Modalidade"    
+         
+        

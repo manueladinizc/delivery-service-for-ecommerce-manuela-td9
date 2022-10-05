@@ -1,14 +1,10 @@
 require 'rails_helper'
 
 describe 'Usuário cadastra uma modalidade' do
-    it 'a partir da tela inicial' do
+    it 'a partir da tela de cadastro de modalidades' do
         #Arrange
         user = UserAdm.create!(name: 'Manuela', email: 'manuela@sistemadefrete.com.br', password: 'password')
         #Act
-        # login_as(user)
-        # visit root_path
-        # click_on 'Modalidades'
-        # click_on 'Adicionar Nova Modalidade'
         visit root_path
         click_on 'Entrar como usuário administrador'
         within('form') do

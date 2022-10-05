@@ -1,0 +1,52 @@
+<nav class="navbar bg-white">
+  <div class="container-fluid">
+    <a class="navbar-brand" >
+      Veículos
+    </a>
+  </div>
+</nav>
+
+<% if user_adm_signed_in? %>
+<div class="btnAdd">
+<a class="btn btn-primary" href="<%= new_vehicle_path %>" role="button">Adicionar Novo Veículo</a>
+</div>
+<% end %>
+
+<% if @vehicles.empty? %>
+  <div class="alertField">
+  <div class="alert alert-warning" role="alert">
+  Não existe veículos cadastradas
+  </div>
+  </div>
+<% elsif %>
+<div class = container-card>  
+  <% @vehicles.each do |v| %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title"><%= v.car_model %></h5>
+           <% if v.car_status == "operation" %>
+            <span class="badge badge-success"><%= Vehicle.human_attribute_name(:operation) %></span>
+          <% else %>  
+            <span class="badge badge-danger"><%= Vehicle.human_attribute_name(:maintenance)%></span>
+          <% end %>
+          <br>
+        <strong><%= Vehicle.human_attribute_name(:brand)%>:</strong>
+        <p class="card-text"><%= v.brand %></p>
+        <strong><%= Vehicle.human_attribute_name(:model_year)%>:</strong>
+        <p class="card-text"><%= v.model_year %></p>
+        <strong><%= Vehicle.human_attribute_name(:registration_plate)%>:</strong>
+        <p class="card-text"><%= v.registration_plate %></p>
+        <strong><%= Vehicle.human_attribute_name(:weight_capacity)%>:</strong>
+        <p class="card-text"><%= v.weight_capacity %>Kg</p>
+        <strong><%= Vehicle.human_attribute_name(:modality_id)%>:</strong>
+        <p class="card-text"><%= v.modality.name %> </p>
+         <% if user_adm_signed_in? %>           
+          <a href="<%= edit_vehicle_path(v.id) %>" class="btn btn-primary">Editar</a>
+        <% end %>
+    </div>
+  </div>
+<% end %>
+</div>
+</div>  
+<% end %>
+
