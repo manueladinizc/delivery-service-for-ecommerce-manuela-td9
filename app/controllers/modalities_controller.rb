@@ -2,15 +2,16 @@ class ModalitiesController < ApplicationController
 
     before_action :set_modality, only: [:edit, :update]
     
-    def authenticate!
-  if @current_user == user_admin 
-      authenticate_user_admin!
-  elsif @current_user == user_regular
-      authenticate_user_regular!
-  end
-end
     
+#     def authenticate!
+#   if @current_user == user_admin 
+#       authenticate_user_admin!
+#   elsif @current_user == user_regular
+#       authenticate_user_regular!
+#   end
+# end
     
+   
 
     def index
         @modalities = Modality.all
@@ -32,10 +33,11 @@ end
 
     def edit
     end
-
+    
     def update
         
         if @modality.update(modality_params)
+            
             redirect_to modalities_path, notice: 'Modalidade atualizado com sucesso'
             else
                 flash.now[:notice] = 'Não foi possível atualizar Modalidade'

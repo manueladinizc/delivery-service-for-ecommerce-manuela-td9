@@ -25,16 +25,15 @@ describe 'Usuário cadastra uma modalidade' do
         expect(page).to have_field('Distância máxima')
         expect(page).to have_field('Peso mínimo')
         expect(page).to have_field('Peso máximo')
-        expect(page).to have_field('Status')
+        expect(page).to have_content('Status:')
+        
+        
     end
 
     it 'com sucesso' do
         #Arrange
         user = UserAdm.create!(name: 'Manuela', email: 'manuela@sistemadefrete.com.br', password: 'password')
         #Act
-        # login_as(user)
-        # visit root_path
-        # click_on 'Modalidades'
         visit root_path
         click_on 'Entrar como usuário administrador'
         within('form') do
@@ -51,13 +50,13 @@ describe 'Usuário cadastra uma modalidade' do
         fill_in 'Distância máxima', with: 10
         fill_in 'Peso mínimo', with: 10
         fill_in 'Peso máximo', with: 19
-        select "activated", from: 'Status'
+        find("label", text: "Desativado").click
         click_on 'Enviar'
         #Assert
         expect(current_path).to eq modalities_path
         expect(page).to have_content 'Modalidade cadastrado com sucesso.'
         expect(page).to have_content 'Same day delivery'
-        expect(page).to have_content 'Ativo'
+        expect(page).to have_content 'Desativado'
         expect(page).to have_content '10'
         end
         
@@ -65,10 +64,6 @@ describe 'Usuário cadastra uma modalidade' do
         #Arrange
         user = UserAdm.create!(name: 'Manuela', email: 'manuela@sistemadefrete.com.br', password: 'password')
         #Act
-        # login_as(user)
-        # visit root_path
-        # click_on 'Modalidades'
-        # click_on 'Adicionar Nova Modalidade'
         visit root_path
         click_on 'Entrar como usuário administrador'
         within('form') do
@@ -84,7 +79,7 @@ describe 'Usuário cadastra uma modalidade' do
         fill_in 'Distância máxima', with: 10
         fill_in 'Peso mínimo', with: 10
         fill_in 'Peso máximo', with: ''
-        select "activated", from: 'Status'
+        find("label", text: "Ativo").click
         click_on 'Enviar'
         #Assert
         expect(page).to have_content 'Modalidade não cadastrado.'
