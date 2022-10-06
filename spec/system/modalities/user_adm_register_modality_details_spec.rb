@@ -46,13 +46,14 @@ describe 'Usuário cadastra uma modalidade' do
         fill_in 'Distância máxima', with: 10
         fill_in 'Peso mínimo', with: 10
         fill_in 'Peso máximo', with: 19
-        find("label", text: "Desativado").click
+        find("label", text: "Ativo").click
+        
         click_on 'Enviar'
         #Assert
         expect(current_path).to eq modalities_path
         expect(page).to have_content 'Modalidade cadastrado com sucesso.'
         expect(page).to have_content 'Same day delivery'
-        expect(page).to have_content 'Desativado'
+        expect(page).to have_content 'Ativo'
         expect(page).to have_content '10'
         end
         

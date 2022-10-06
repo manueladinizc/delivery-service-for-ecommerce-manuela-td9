@@ -20,7 +20,7 @@ describe 'Usuário busca por um pedido' do
        
         modality = Modality.create!(name: 'Entrega Expressa', minimum_distance: 3, maximum_distance:25, minimum_weight:0, maximum_weight:30, flat_rate:20)
 
-        Vehicle.create!(registration_plate: 123456, brand: "Mercedes-Benz", car_model: "Sprinter", model_year: 2017, weight_capacity:300, car_status:0, modality: modality)
+        vehicle = Vehicle.create!(registration_plate: 123456, brand: "Mercedes-Benz", car_model: "Sprinter", model_year: 2017, weight_capacity:300, car_status:0, modality: modality)
         
         #Act
         login_as(user)
@@ -30,8 +30,7 @@ describe 'Usuário busca por um pedido' do
         click_on 'Buscar'
        
         #Assert
-        #expect(page).to have_content "Resultado da Busca por: #{vehicle.registration_plate}"
-        expect(page).to have_content "Resultado da Busca por: 123456"
+        expect(page).to have_content "Resultado da Busca por: #{vehicle.registration_plate}"
         expect(page).to have_content '1 veículo encontrado'       
         expect(page).to have_content("Sprinter")
         expect(page).to have_content("Marca:\nMercedes-Benz")
