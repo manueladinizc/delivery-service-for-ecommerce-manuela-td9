@@ -10,11 +10,15 @@ class ModalitiesController < ApplicationController
 #       authenticate_user_regular!
 #   end
 # end
-    
+
+    def show
+        @modality = Modality.find(params[:id])
+    end
    
 
     def index
         @modalities = Modality.all
+        
     end
 
     def new

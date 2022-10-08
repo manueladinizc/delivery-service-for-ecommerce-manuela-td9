@@ -5,5 +5,6 @@ class Modality < ApplicationRecord
     validates :name, uniqueness: true
     
     has_many :vehicles
+    has_many :weight_prices
     
 end

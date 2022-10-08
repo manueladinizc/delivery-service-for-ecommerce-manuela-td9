@@ -8,9 +8,8 @@
     flex-direction: row;
     margin: 2px auto 0 auto;			
 	width: 700px;		
-	display: flex;                  
-	        
-	justify-content: center;
+	display: flex; 
+    justify-content: center;
 }
 
 .search-title{

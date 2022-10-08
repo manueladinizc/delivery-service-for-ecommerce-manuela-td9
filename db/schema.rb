@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_05_015338) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_06_231403) do
   create_table "modalities", force: :cascade do |t|
     t.string "name"
     t.integer "minimum_distance"
@@ -64,5 +64,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_05_015338) do
     t.index ["modality_id"], name: "index_vehicles_on_modality_id"
   end
 
+  create_table "weight_prices", force: :cascade do |t|
+    t.integer "initial_weight"
+    t.integer "final_weight"
+    t.integer "weight_rate"
+    t.integer "modality_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["modality_id"], name: "index_weight_prices_on_modality_id"
+  end
+
   add_foreign_key "vehicles", "modalities"
+  add_foreign_key "weight_prices", "modalities"
 end

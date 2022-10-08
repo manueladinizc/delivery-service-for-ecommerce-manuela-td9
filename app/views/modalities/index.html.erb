@@ -8,15 +8,15 @@
 
 <% if user_adm_signed_in? %>
 <div class="btnAdd">
-<a class="btn btn-primary" href="<%= new_modality_path %>" role="button">Adicionar Nova Modalidade</a>
+  <a class="btn btn-primary" href="<%= new_modality_path %>" role="button">Adicionar Nova Modalidade</a>
 </div>
 <% end %>
 
 <% if @modalities.empty? %>
   <div class="alertField">
-  <div class="alert alert-warning" role="alert">
-  Não existe modalidades de transporte cadastradas
-  </div>
+    <div class="alert alert-warning" role="alert">
+      Não existe modalidades de transporte cadastradas
+    </div>
   </div>
 <% elsif %>
 <div class = container-card>  
@@ -29,24 +29,26 @@
           <% else %>  
             <span class="badge badge-danger"><%= Modality.human_attribute_name(:disabled)%></span>
           <% end %>
-          <br>
-        <strong><%= Modality.human_attribute_name(:minimum_distance)%>:</strong>
-        <p class="card-text"><%= m.minimum_distance %>km</p>
-        <strong><%= Modality.human_attribute_name(:maximum_distance)%>:</strong>
-        <p class="card-text"><%= m.maximum_distance %>km</p>
-        <strong><%= Modality.human_attribute_name(:minimum_weight)%>:</strong>
-        <p class="card-text"><%= m.minimum_weight %>kg</p>
-        <strong><%= Modality.human_attribute_name(:maximum_weight)%>:</strong>
-        <p class="card-text"><%= m.maximum_weight %>kg</p>
-        <strong><%= Modality.human_attribute_name(:flat_rate)%>:</strong>
-        <p class="card-text">R$<%= m.flat_rate %></p>
-         <% if user_adm_signed_in? %>           
-          <a href="<%= edit_modality_path(m.id) %>" class="btn btn-primary">Editar</a>
-        <% end %>
-    </div>
+            <br>
+            <strong><%= Modality.human_attribute_name(:minimum_distance)%>:</strong>
+            <p class="card-text"><%= m.minimum_distance %>km</p>
+            <strong><%= Modality.human_attribute_name(:maximum_distance)%>:</strong>
+            <p class="card-text"><%= m.maximum_distance %>km</p>
+            <strong><%= Modality.human_attribute_name(:minimum_weight)%>:</strong>
+            <p class="card-text"><%= m.minimum_weight %>kg</p>
+            <strong><%= Modality.human_attribute_name(:maximum_weight)%>:</strong>
+            <p class="card-text"><%= m.maximum_weight %>kg</p>
+            <strong><%= Modality.human_attribute_name(:flat_rate)%>:</strong>
+            <p class="card-text">R$<%= m.flat_rate %></p>
+          <% if user_adm_signed_in? %>           
+            <a href="<%= edit_modality_path(m.id) %>" class="btn btn-primary">Editar</a>
+          <% end %>
+          <a href="<%= modality_path(m.id) %>" class="btn btn-secondary">Tabelas de preços</a>
+      </div>
   </div>
-<% end %>
+  <% end %>
 </div>
-</div>  
+
 <% end %>
+ 
 

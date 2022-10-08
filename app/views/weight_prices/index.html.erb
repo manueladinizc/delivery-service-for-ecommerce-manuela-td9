@@ -1,0 +1,36 @@
+<nav class="navbar bg-white">
+  <div class="container-fluid">
+    <a class="navbar-brand" >
+      Tabela de configuração de preço por peso
+    </a>
+  </div>
+</nav>
+
+
+<% if @weight_prices.empty? %>
+  <div class="alertField">
+    <div class="alert alert-warning" role="alert">
+      Não existe dados para a tabela
+    </div>
+  </div>
+<% else %>
+<div class="table-container">
+<table class="table table-hover table-bordered">
+<thead>
+  <tr class="table-title-bg">
+    <th colspan="2" class="col-2">Intervalo (Kg)</th>
+    <th class="col-1">Preço (R$)</th>    
+  </tr>
+</thead>
+<tbody>
+   <% @weight_prices.each do |w| %>
+    <tr>
+      <td><%= w.initial_weight %></td>
+      <td><%= w.final_weight %></td>
+      <td><%= w.weight_rate %></td>
+     
+    </tr>
+ <% end %>
+</tbody>
+</div>
+<%end%>
