@@ -1,0 +1,90 @@
+<nav class="navbar bg-white">
+  <div class="container-fluid">
+    <a class="navbar-brand" >
+      Criar Ordem de Serviço
+    </a>
+  </div>
+</nav>
+
+<% if(@work_order.errors.any?) %>
+  <div class="alertField">
+    <div class = "alert alert-warning">
+    <p>Verifique os erros abaixo:</p>    
+    <% @work_order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>  
+    <% end %>    
+    </div>
+  </div>
+<% end %>
+
+
+<%= form_with(model: @work_order) do |f| %>
+
+   <div class="container-form-modality">
+        <h5 style="color: #697486;">Informações do produto:</h5>
+        <div class="form-group col-md-6">
+        <%= f.label :product_code %>
+        <%= f.text_field :product_code, { class: "form-control", placeholder: "Código do produto" } %>
+        </div>        
+        <div class="form-group col-md-6">
+        <%= f.label :height %> (cm)
+        <%= f.number_field :height, { class: "form-control", placeholder: "Altura" } %>
+        </div>    
+        <div class="form-group col-md-6">
+        <%= f.label :width %> (cm)
+        <%= f.number_field :width, { class: "form-control", placeholder: "Comprimento" } %>
+        </div>
+        <div class="form-group col-md-6">
+        <%= f.label :depth %> (cm)
+        <%= f.number_field :depth, { class: "form-control", placeholder: "Profundidade" } %>
+        </div>      
+        <div class="form-group col-md-6">
+        <%= f.label :weight %> (Kg)
+        <%= f.number_field :weight, { class: "form-control", placeholder: "Peso" } %>
+        </div>
+        
+        <h5 style="color: #697486;">Dados para Retirada:</h5>  
+        <div class="form-group col-md-6">
+        <%= f.label :pickup_address %> 
+        <%= f.text_field :pickup_address, { class: "form-control", placeholder: "Endereço de retirada" } %>
+        </div>
+        <div class="form-group col-md-6">
+        <%= f.label :pickup_city %> 
+        <%= f.text_field :pickup_city, { class: "form-control", placeholder: "Cidade de retirada" } %>
+        </div>
+        <div class="form-group col-md-6">
+        <%= f.label :pickup_state %> 
+        <%= f.text_field :pickup_state, { class: "form-control", placeholder: "Estado de retirada" } %>
+        </div>
+
+        <h5 style="color: #697486;">Dados para Entrega:</h5> 
+        <div class="form-group col-md-6">
+        <%= f.label :customer_name %>
+        <%= f.text_field :customer_name, { class: "form-control", placeholder: "Nome do cliente" } %>
+        </div>
+        <div class="form-group col-md-6">
+        <%= f.label :delivery_address %>
+        <%= f.text_field :delivery_address, { class: "form-control", placeholder: "Endereço de entrega" } %>
+        </div>
+        <div class="form-group col-md-6">
+        <%= f.label :delivery_city %> 
+        <%= f.text_field :delivery_city, { class: "form-control", placeholder: "Cidade de entrega" } %>
+        </div>
+         <div class="form-group col-md-6">
+        <%= f.label :delivery_state %> 
+        <%= f.text_field :delivery_state, { class: "form-control", placeholder: "Estado de entrega" } %>
+        </div>
+        <div class="form-group col-md-6">
+        <%= f.label :distance %> (km)
+        <%= f.text_field :distance, { class: "form-control", placeholder: "Distância" } %>
+        </div>
+        
+        
+
+        <br>
+        <div class="btn-form-modality">        
+        <%= f.submit 'Enviar', class: "btn btn-primary" %>
+        </div>
+    </div>
+
+<% end %>

@@ -10,7 +10,6 @@ pt-BR:
       work_order:
         pending: "Pendente"
         progress: "Em andamento"   
-        modality_id: "Modalidade" 
         product_code: "Código do produto"
         height: "Altura"
         width: "Comprimento"
@@ -23,6 +22,7 @@ pt-BR:
         delivery_address: "Endereço de entrega"
         delivery_state: "Estado de entrega"
         delivery_city: "Cidade de entrega"
+        customer_name: "Nome do cliente"
         distance: "Distância"
          
         
