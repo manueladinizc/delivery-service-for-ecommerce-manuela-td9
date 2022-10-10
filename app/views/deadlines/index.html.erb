@@ -1,13 +1,13 @@
 <nav class="navbar bg-white">
   <div class="container-fluid">
     <a class="navbar-brand" >
-      Tabela de configuração de preço por peso
+      Tabela de configuração de prazos por distância
     </a>
   </div>
 </nav>
 
 
-<% if @weight_prices.empty? %>
+<% if @deadlines.empty? %>
   <div class="alertField">
     <div class="alert alert-warning" role="alert">
       Não existe dados para a tabela
@@ -18,16 +18,16 @@
 <table class="table table-hover table-bordered">
 <thead>
   <tr class="table-title-bg">
-    <th colspan="2" class="col-2">Intervalo (Kg)</th>
-    <th class="col-1">Valor por km (R$)</th>    
+    <th colspan="2" class="col-2">Distância (Km)</th>
+    <th class="col-1">Prazo (dias)</th>    
   </tr>
 </thead>
 <tbody>
-   <% @weight_prices.each do |w| %>
+   <% @deadlines.each do |d| %>
     <tr>
-      <td><%= w.initial_weight %></td>
-      <td><%= w.final_weight %></td>
-      <td><%= w.weight_rate %></td>
+      <td><%= d.initial_interval %></td>
+      <td><%= d.final_interval %></td>
+      <td><%= d.duration %></td>
      
     </tr>
  <% end %>

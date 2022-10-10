@@ -1,6 +1,6 @@
 class ModalitiesController < ApplicationController
-
-    before_action :set_modality, only: [:edit, :update]
+    
+    #before_action :set_modality, only: [:edit, :update, :show]
     
     
 #     def authenticate!
@@ -36,10 +36,11 @@ class ModalitiesController < ApplicationController
     end
 
     def edit
+        @modality = Modality.find(params[:id])
     end
     
     def update
-        
+        @modality = Modality.find(params[:id])
         if @modality.update(modality_params)
             
             redirect_to modalities_path, notice: 'Modalidade atualizado com sucesso'
@@ -54,9 +55,9 @@ class ModalitiesController < ApplicationController
 
 
     private
-    def set_modality 
-        @modality = Modality.find(params[:id])
-    end    
+    # def set_modality 
+    #     @modality = Modality.find(params[:id])
+    # end    
 
     def modality_params
         params.require(:modality).permit(:name, :minimum_distance, :maximum_distance, :minimum_weight, :maximum_weight, :flat_rate, :modality_status) 

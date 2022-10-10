@@ -7,7 +7,7 @@ class CreateModalities < ActiveRecord::Migration[7.0]
       t.integer :minimum_weight
       t.integer :maximum_weight
       t.integer :flat_rate
-      t.integer :modality_status, :integer, default:0
+      t.integer :modality_status, default:0
 
       t.timestamps
     end

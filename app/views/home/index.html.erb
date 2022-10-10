@@ -1,13 +1,23 @@
 
 <div class="btn-container-index">
-  <div class="btn-item">
-  <a class="btn btn-primary btn-lg btn-block" href="<%= new_user_adm_session_path %>" role="button">Entrar como usuário administrador</a>
-  </div>
-
-  <div class="btn-item">
-  <a class="btn btn-secondary btn-lg btn-block" href="<%= new_user_regular_session_path %>" role="button">Entrar como usuário regular </a>
-  </div>
-
+  
+  <% if user_adm_signed_in? %>
+    <div class="btn-item">
+    <a class="btn btn-primary btn-lg btn-block" href="<%= new_user_adm_session_path %>" role="button">Entrar como usuário administrador</a>
+    </div>
+  <% elsif user_regular_signed_in? %>
+    <div class="btn-item">
+    <a class="btn btn-secondary btn-lg btn-block" href="<%= new_user_regular_session_path %>" role="button">Entrar como usuário regular </a>
+    </div>
+  <% else %>
+    <div class="btn-item">
+    <a class="btn btn-primary btn-lg btn-block" href="<%= new_user_adm_session_path %>" role="button">Entrar como usuário administrador</a>
+    </div>
+  
+    <div class="btn-item">
+    <a class="btn btn-secondary btn-lg btn-block" href="<%= new_user_regular_session_path %>" role="button">Entrar como usuário regular </a>
+  <% end %>
+  
   <%# <div class="btn-item">
   <a class="btn btn-success btn-lg btn-block" href="#" role="button">Consultar entrega</a>
   </div> %>

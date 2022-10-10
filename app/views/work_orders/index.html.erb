@@ -1,0 +1,42 @@
+<nav class="navbar bg-white">
+  <div class="container-fluid">
+    <a class="navbar-brand" >
+      Ordem de Serviço
+    </a>
+  </div>
+</nav>
+
+<% if user_adm_signed_in? %>
+<div class="btnAdd">
+  <a class="btn btn-primary" href="#" role="button">Criar Ordem de Serviço</a>
+</div>
+<% end %>
+
+<% if @work_orders.empty? %>
+  <div class="alertField">
+    <div class="alert alert-warning" role="alert">
+      Não existe ordem de serviços
+    </div>
+  </div>
+<% else %>
+<div class="table-container">
+<table class="table table-hover table-bordered">
+<thead>
+  <tr class="table-title-bg">
+    <th class="col-1">Código</th>
+    <th class="col-1">Status</th>    
+    <th class="col-1">Detalhes</th>            
+  </tr>
+</thead>
+<tbody>
+   <% @work_orders.each do |w| %>
+    <tr>
+      <td><%= w.delivery_code %></td>
+      <td><%= w.work_order_status %></td>
+      <td><a class="btn btn-primary" href="<%=  work_order_path(w.id) %>" role="button">Detalhes</a></td>
+     
+    </tr>
+ <% end %>
+</tbody>
+</div>
+<%end%>

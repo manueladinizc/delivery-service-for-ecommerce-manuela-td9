@@ -1,4 +1,4 @@
-class WeightPrice < ApplicationRecord
+class Deadline < ApplicationRecord
   belongs_to :modality
   has_many :open_work_order
 end

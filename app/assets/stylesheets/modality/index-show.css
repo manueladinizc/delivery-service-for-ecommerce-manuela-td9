@@ -46,7 +46,7 @@ p {
 
 .btn-container-index{     
     margin: 2px auto 0 auto;			
-	width: 500px;		
+	width: 600px;		
 	display: flex;                  
 	flex-direction: column;         
 	justify-content: center;    
@@ -55,5 +55,5 @@ p {
 
 .btn-item{
     margin: 15px;
-    width: 500px;
+    width: 550px;
 }
