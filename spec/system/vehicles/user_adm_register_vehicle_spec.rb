@@ -23,7 +23,7 @@ describe 'Usuário cadastra uma modalidade' do
         expect(page).to have_content("Número de registro")
         expect(page).to have_content("Capacidade de peso máxima (kg)")
         expect(page).to have_content("Modalidade:")
-        expect(page).to have_content("Status:")
+        
         
         
     end
@@ -50,7 +50,7 @@ describe 'Usuário cadastra uma modalidade' do
         fill_in 'Ano', with: 2018
         fill_in 'Número de registro', with: 113264
         fill_in 'Capacidade de peso máxima', with: 1000
-        find("label", text: "Em operação").click
+        select 'Entrega Expressa', from: 'Modalidade'
         click_on 'Enviar'
         #Assert
         expect(current_path).to eq vehicles_path
@@ -80,7 +80,6 @@ describe 'Usuário cadastra uma modalidade' do
         fill_in 'Ano', with: ''
         fill_in 'Número de registro', with: 113264
         fill_in 'Capacidade de peso máxima', with: ''
-        find("label", text: "Em operação").click
         click_on 'Enviar'
         #Assert
         expect(page).to have_content 'Veículo não cadastrado.'

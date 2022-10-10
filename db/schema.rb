@@ -39,7 +39,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_09_194110) do
     t.integer "maximum_weight"
     t.integer "flat_rate"
     t.integer "modality_status", default: 0
-    t.integer "integer", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -93,7 +92,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_09_194110) do
     t.integer "model_year"
     t.integer "weight_capacity"
     t.integer "car_status", default: 0
-    t.integer "integer", default: 0
     t.integer "modality_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

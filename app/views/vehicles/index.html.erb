@@ -42,10 +42,12 @@
   <div class="card" style="width: 18rem;">
     <div class="card-body">
         <h5 class="card-title"><%= v.car_model %></h5>
-           <% if v.car_status == "operation" %>
+          <% if v.car_status == "operation" %>
             <span class="badge badge-success"><%= Vehicle.human_attribute_name(:operation) %></span>
-          <% else %>  
+          <% elsif v.car_status == "maintenance"%>  
             <span class="badge badge-danger"><%= Vehicle.human_attribute_name(:maintenance)%></span>
+          <% else %>
+            <span class="badge badge-primary"><%= Vehicle.human_attribute_name(:delivery)%></span>
           <% end %>
           <br>
         <strong><%= Vehicle.human_attribute_name(:brand)%>:</strong>

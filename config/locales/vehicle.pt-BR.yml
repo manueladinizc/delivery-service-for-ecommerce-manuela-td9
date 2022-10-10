@@ -1,6 +1,7 @@
 pt-BR:
   operation: "Em operação"
   maintenance: "Em manutenção"    
+  delivery: "Em entrega"    
   activerecord:
     models:
       vehicle: 
@@ -16,6 +17,7 @@ pt-BR:
         car_status: "Status"
         operation: "Em operação"
         maintenance: "Em manutenção" 
-        modality_id: "Modalidade"    
+        delivery: "Em entrega"   
+        modality_id: "Modalidade" 
          
         
