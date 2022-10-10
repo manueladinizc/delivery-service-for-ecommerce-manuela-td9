@@ -1,0 +1,28 @@
+pt-BR:
+  pending: "Pendente"
+  progress: "Em andamento"         
+  activerecord:
+    models:
+      work_order: 
+        one: Ordem se serviço
+        other: Ordens de serviço     
+    attributes:
+      work_order:
+        pending: "Pendente"
+        progress: "Em andamento"   
+        modality_id: "Modalidade" 
+        product_code: "Código do produto"
+        height: "Altura"
+        width: "Comprimento"
+        depth: "Profundidade"
+        weight: "Peso"
+        pickup_city: "Cidade de retirada"
+        pickup_address: "Endereço de retirada"
+        pickup_state: "Estado de retirada"
+        customer_name: "Nome do cliente"
+        delivery_address: "Endereço de entrega"
+        delivery_state: "Estado de entrega"
+        delivery_city: "Cidade de entrega"
+        distance: "Distância"
+         
+        

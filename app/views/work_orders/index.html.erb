@@ -7,7 +7,7 @@
 </nav>
 
 <% if user_adm_signed_in? %>
-<div class="btnAdd">
+<div class="btnAdd-work-order">
   <a class="btn btn-primary" href="#" role="button">Criar Ordem de Serviço</a>
 </div>
 <% end %>
@@ -15,12 +15,12 @@
 <% if @work_orders.empty? %>
   <div class="alertField">
     <div class="alert alert-warning" role="alert">
-      Não existe ordem de serviços
+      Não existe ordem de serviço cadastrada
     </div>
   </div>
 <% else %>
 <div class="table-container">
-<table class="table table-hover table-bordered">
+<table class="table table-hover table-bordered" >
 <thead>
   <tr class="table-title-bg">
     <th class="col-1">Código</th>
@@ -32,7 +32,13 @@
    <% @work_orders.each do |w| %>
     <tr>
       <td><%= w.delivery_code %></td>
-      <td><%= w.work_order_status %></td>
+      <td>
+      <% if w.work_order_status == "pending" %>
+        <span class="badge badge-secondary"><%= WorkOrder.human_attribute_name(:pending) %></span>
+      <% else %>        
+        <span class="badge badge-primary"><%= WorkOrder.human_attribute_name(:progress) %></span>
+        <% end %>
+      </td>
       <td><a class="btn btn-primary" href="<%=  work_order_path(w.id) %>" role="button">Detalhes</a></td>
      
     </tr>

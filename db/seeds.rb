@@ -106,8 +106,8 @@ Deadline.create!(initial_interval:51, final_interval:150, duration:4, modality: 
 Deadline.create!(initial_interval:151, final_interval:800, duration:6, modality: modality_4 )
 Deadline.create!(initial_interval:801, final_interval:1500, duration:8, modality: modality_4 )
 
-WorkOrder.create!(pickup_address: "Rua da Saudade, 10", pickup_city: 'Recife', pickup_state: "PE", product_code: "12345A", height:"50", width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 252", customer_name: "João", delivery_city: "Recife", delivery_state: 'PE', distance:100)
+WorkOrder.create!(pickup_address: "Rua da Saudade, 10", pickup_city: 'Recife', pickup_state: "PE", product_code: "12345A", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 252", customer_name: "João", delivery_city: "Recife", delivery_state: 'PE', distance:100)
 
-WorkOrder.create!(pickup_address: "Rua das Fronteiras, 18", pickup_city: 'Recife', pickup_state: "PE", product_code: "18845A", height:"50", width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 1000", customer_name: "Carolina", delivery_city: "Recife", delivery_state: 'PE', distance:10)
+WorkOrder.create!(pickup_address: "Rua das Fronteiras, 18", pickup_city: 'Recife', pickup_state: "PE", product_code: "18845A", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 1000", customer_name: "Carolina", delivery_city: "Recife", delivery_state: 'PE', distance:10)
 
-WorkOrder.create!(pickup_address: "Rua da lua, 87", pickup_city: 'Recife', pickup_state: "PE", product_code: "52845A", height:"50", width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 1000", customer_name: "Caio", delivery_city: "Recife", delivery_state: 'PE', distance:500)
+WorkOrder.create!(pickup_address: "Rua da lua, 87", pickup_city: 'Recife', pickup_state: "PE", product_code: "52845A", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 1000", customer_name: "Caio", delivery_city: "Recife", delivery_state: 'PE', distance:500)
