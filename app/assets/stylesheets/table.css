@@ -5,3 +5,23 @@
     left: 25px;
 }
 
+ .table-space{
+    width: 20%;
+    margin: 10px;
+    
+}
+/* .table-container-prices{
+    display: flex;    
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+
+}  */
+
+.table-container-prices{
+    width: 700px;
+    margin: 10px;
+    position: relative;
+    left: 25px;
+}

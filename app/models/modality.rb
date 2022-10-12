@@ -6,5 +6,10 @@ class Modality < ApplicationRecord
     
     has_many :vehicles
     has_many :weight_prices
+    has_many :distance_prices
+    has_many :deadlines
+    has_many :open_work_orders
     
 end
+
+

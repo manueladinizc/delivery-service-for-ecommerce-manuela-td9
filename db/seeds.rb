@@ -47,64 +47,64 @@ Vehicle.create!(registration_plate: 452456, brand: "Mercedes-Benz", car_model: "
 #WeightPrices
 #Modality_1
 WeightPrice.create!(initial_weight:0, final_weight:10, weight_rate:1, modality: modality_1 )
-WeightPrice.create!(initial_weight:11, final_weight:30, weight_rate:2, modality: modality_1 )
-WeightPrice.create!(initial_weight:31, final_weight:100, weight_rate:3, modality: modality_1 )
-WeightPrice.create!(initial_weight:101, final_weight:1000, weight_rate:4, modality: modality_1 )
+WeightPrice.create!(initial_weight:11, final_weight:30, weight_rate:5, modality: modality_1 )
+WeightPrice.create!(initial_weight:31, final_weight:100, weight_rate:9, modality: modality_1 )
+WeightPrice.create!(initial_weight:101, final_weight:1000, weight_rate:13, modality: modality_1 )
 #Modality_2
-WeightPrice.create!(initial_weight:0, final_weight:10, weight_rate:5, modality: modality_2 )
-WeightPrice.create!(initial_weight:11, final_weight:30, weight_rate:5, modality: modality_2 )
-WeightPrice.create!(initial_weight:31, final_weight:100, weight_rate:7, modality: modality_2 )
-WeightPrice.create!(initial_weight:101, final_weight:1000, weight_rate:8, modality: modality_2 )
+WeightPrice.create!(initial_weight:0, final_weight:10, weight_rate:2, modality: modality_2 )
+WeightPrice.create!(initial_weight:11, final_weight:30, weight_rate:6, modality: modality_2 )
+WeightPrice.create!(initial_weight:31, final_weight:100, weight_rate:10, modality: modality_2 )
+WeightPrice.create!(initial_weight:101, final_weight:1000, weight_rate:14, modality: modality_2 )
 #Modality_3
-WeightPrice.create!(initial_weight:0, final_weight:10, weight_rate:9, modality: modality_3 )
-WeightPrice.create!(initial_weight:11, final_weight:30, weight_rate:10, modality: modality_3 )
+WeightPrice.create!(initial_weight:0, final_weight:10, weight_rate:3, modality: modality_3 )
+WeightPrice.create!(initial_weight:11, final_weight:30, weight_rate:7, modality: modality_3 )
 WeightPrice.create!(initial_weight:31, final_weight:100, weight_rate:11, modality: modality_3 )
-WeightPrice.create!(initial_weight:101, final_weight:1000, weight_rate:12, modality: modality_3 )
+WeightPrice.create!(initial_weight:101, final_weight:1000, weight_rate:15, modality: modality_3 )
 #Modality_4
-WeightPrice.create!(initial_weight:0, final_weight:10, weight_rate:5, modality: modality_4 )
-WeightPrice.create!(initial_weight:11, final_weight:30, weight_rate:10, modality: modality_4 )
-WeightPrice.create!(initial_weight:31, final_weight:100, weight_rate:15, modality: modality_4 )
-WeightPrice.create!(initial_weight:101, final_weight:1000, weight_rate:20, modality: modality_4 )
+WeightPrice.create!(initial_weight:0, final_weight:10, weight_rate:4, modality: modality_4 )
+WeightPrice.create!(initial_weight:11, final_weight:30, weight_rate:8, modality: modality_4 )
+WeightPrice.create!(initial_weight:31, final_weight:100, weight_rate:12, modality: modality_4 )
+WeightPrice.create!(initial_weight:101, final_weight:1000, weight_rate:16, modality: modality_4 )
 
 #DistancePrices
 #Modality_1
-DistancePrice.create!(initial_distance:0, final_distance:50, distance_rate:9, modality: modality_1 )
-DistancePrice.create!(initial_distance:51, final_distance:150, distance_rate:12, modality: modality_1 )
-DistancePrice.create!(initial_distance:150, final_distance:800, distance_rate:20, modality: modality_1 )
+DistancePrice.create!(initial_distance:0, final_distance:50, distance_rate:2, modality: modality_1 )
+DistancePrice.create!(initial_distance:51, final_distance:150, distance_rate:9, modality: modality_1 )
+DistancePrice.create!(initial_distance:150, final_distance:800, distance_rate:13, modality: modality_1 )
 #Modality_2
-DistancePrice.create!(initial_distance:0, final_distance:50, distance_rate:5, modality: modality_2 )
-DistancePrice.create!(initial_distance:51, final_distance:150, distance_rate:8, modality: modality_2 )
-DistancePrice.create!(initial_distance:150, final_distance:800, distance_rate:10, modality: modality_2 )
+DistancePrice.create!(initial_distance:0, final_distance:50, distance_rate:4, modality: modality_2 )
+DistancePrice.create!(initial_distance:51, final_distance:150, distance_rate:10, modality: modality_2 )
+DistancePrice.create!(initial_distance:150, final_distance:800, distance_rate:15, modality: modality_2 )
 #Modality_3
-DistancePrice.create!(initial_distance:0, final_distance:50, distance_rate:3, modality: modality_3 )
-DistancePrice.create!(initial_distance:51, final_distance:150, distance_rate:7, modality: modality_3 )
-DistancePrice.create!(initial_distance:150, final_distance:800, distance_rate:8, modality: modality_3 )
+DistancePrice.create!(initial_distance:0, final_distance:50, distance_rate:6, modality: modality_3 )
+DistancePrice.create!(initial_distance:51, final_distance:150, distance_rate:11, modality: modality_3 )
+DistancePrice.create!(initial_distance:150, final_distance:800, distance_rate:17, modality: modality_3 )
 #Modality_4
-DistancePrice.create!(initial_distance:0, final_distance:50, distance_rate:10, modality: modality_4 )
-DistancePrice.create!(initial_distance:51, final_distance:150, distance_rate:15, modality: modality_4 )
-DistancePrice.create!(initial_distance:150, final_distance:800, distance_rate:16, modality: modality_4 )
+DistancePrice.create!(initial_distance:0, final_distance:50, distance_rate:8, modality: modality_4 )
+DistancePrice.create!(initial_distance:51, final_distance:150, distance_rate:12, modality: modality_4 )
+DistancePrice.create!(initial_distance:150, final_distance:800, distance_rate:20, modality: modality_4 )
 
 #Deadline
 #Modality_1
 Deadline.create!(initial_interval:0, final_interval:50, duration:1, modality: modality_1 )
-Deadline.create!(initial_interval:51, final_interval:150, duration:2, modality: modality_1 )
-Deadline.create!(initial_interval:151, final_interval:800, duration:3, modality: modality_1 )
-Deadline.create!(initial_interval:801, final_interval:1500, duration:4, modality: modality_1 )
+Deadline.create!(initial_interval:51, final_interval:150, duration:5, modality: modality_1 )
+Deadline.create!(initial_interval:151, final_interval:800, duration:7, modality: modality_1 )
+Deadline.create!(initial_interval:801, final_interval:1500, duration:9, modality: modality_1 )
 #Modality_2
 Deadline.create!(initial_interval:0, final_interval:50, duration:2, modality: modality_2 )
-Deadline.create!(initial_interval:51, final_interval:150, duration:3, modality: modality_2 )
-Deadline.create!(initial_interval:151, final_interval:800, duration:4, modality: modality_2 )
-Deadline.create!(initial_interval:801, final_interval:1500, duration:5, modality: modality_2 )
+Deadline.create!(initial_interval:51, final_interval:150, duration:6, modality: modality_2 )
+Deadline.create!(initial_interval:151, final_interval:800, duration:8, modality: modality_2 )
+Deadline.create!(initial_interval:801, final_interval:1500, duration:10, modality: modality_2 )
 #Modality_3
-Deadline.create!(initial_interval:0, final_interval:50, duration:6, modality: modality_3 )
-Deadline.create!(initial_interval:51, final_interval:150, duration:7, modality: modality_3 )
+Deadline.create!(initial_interval:0, final_interval:50, duration:3, modality: modality_3 )
+Deadline.create!(initial_interval:51, final_interval:150, duration:6, modality: modality_3 )
 Deadline.create!(initial_interval:151, final_interval:800, duration:8, modality: modality_3 )
-Deadline.create!(initial_interval:801, final_interval:1500, duration:9, modality: modality_3 )
+Deadline.create!(initial_interval:801, final_interval:1500, duration:11, modality: modality_3 )
 #Modality_4
-Deadline.create!(initial_interval:0, final_interval:50, duration:2, modality: modality_4 )
-Deadline.create!(initial_interval:51, final_interval:150, duration:4, modality: modality_4 )
-Deadline.create!(initial_interval:151, final_interval:800, duration:6, modality: modality_4 )
-Deadline.create!(initial_interval:801, final_interval:1500, duration:8, modality: modality_4 )
+Deadline.create!(initial_interval:0, final_interval:50, duration:4, modality: modality_4 )
+Deadline.create!(initial_interval:51, final_interval:150, duration:7, modality: modality_4 )
+Deadline.create!(initial_interval:151, final_interval:800, duration:9, modality: modality_4 )
+Deadline.create!(initial_interval:801, final_interval:1500, duration:12, modality: modality_4 )
 
 WorkOrder.create!(pickup_address: "Rua da Saudade, 10", pickup_city: 'Recife', pickup_state: "PE", product_code: "12345A", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 252", customer_name: "João", delivery_city: "Recife", delivery_state: 'PE', distance:100)
 

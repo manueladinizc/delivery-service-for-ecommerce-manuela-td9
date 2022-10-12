@@ -45,17 +45,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_09_194110) do
 
   create_table "open_work_orders", force: :cascade do |t|
     t.integer "modality_id", null: false
-    t.integer "deadline_id", null: false
-    t.integer "distance_price_id", null: false
-    t.integer "weight_price_id", null: false
     t.integer "work_order_id", null: false
     t.integer "total_price"
+    t.date "deadline_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["deadline_id"], name: "index_open_work_orders_on_deadline_id"
-    t.index ["distance_price_id"], name: "index_open_work_orders_on_distance_price_id"
     t.index ["modality_id"], name: "index_open_work_orders_on_modality_id"
-    t.index ["weight_price_id"], name: "index_open_work_orders_on_weight_price_id"
     t.index ["work_order_id"], name: "index_open_work_orders_on_work_order_id"
   end
 
@@ -130,10 +125,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_09_194110) do
 
   add_foreign_key "deadlines", "modalities"
   add_foreign_key "distance_prices", "modalities"
-  add_foreign_key "open_work_orders", "deadlines"
-  add_foreign_key "open_work_orders", "distance_prices"
   add_foreign_key "open_work_orders", "modalities"
-  add_foreign_key "open_work_orders", "weight_prices"
   add_foreign_key "open_work_orders", "work_orders"
   add_foreign_key "vehicles", "modalities"
   add_foreign_key "weight_prices", "modalities"

@@ -6,9 +6,11 @@
   </div>
 </nav>
 
+<% if @work_order.work_order_status == "pending" %>
 <div class="btnAdd">
   <a class="btn btn-primary" href="<%= new_work_order_open_work_order_path(work_order_id: @work_order.id) %>" role="button">Iniciar Ordem de Serviço</a>
 </div>
+<% end %>
 
 <div class = container-card>  
   

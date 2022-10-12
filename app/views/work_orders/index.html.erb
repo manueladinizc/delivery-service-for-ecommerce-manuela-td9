@@ -25,7 +25,7 @@
   <tr class="table-title-bg">
     <th class="col-1">Código</th>
     <th class="col-1">Status</th>    
-    <th class="col-1">Detalhes</th>            
+    <th class="col-1">Iniciar Ordem</th>            
   </tr>
 </thead>
 <tbody>
@@ -39,7 +39,7 @@
         <span class="badge badge-primary"><%= WorkOrder.human_attribute_name(:progress) %></span>
         <% end %>
       </td>
-      <td><a class="btn btn-primary" href="<%=  work_order_path(w.id) %>" role="button">Detalhes</a></td>
+      <td><a class="btn btn-primary" href="<%=  work_order_path(w.id) %>" role="button">Mais detalhes...</a></td>
      
     </tr>
  <% end %>

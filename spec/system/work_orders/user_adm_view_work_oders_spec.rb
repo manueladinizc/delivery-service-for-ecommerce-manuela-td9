@@ -17,9 +17,9 @@ describe 'Usuário visita página de ordem de serviço' do
         #Assert
         expect(page).to have_content('Código')
         expect(page).to have_content('Status')
-        expect(page).to have_content('Detalhes')
+        expect(page).to have_content('Mais detalhes...')
         expect(page).to have_content('ABC123456789456123')
-        expect(page).to have_content('Detalhes')
+        expect(page).to have_content('Mais detalhes...')
         expect(page).to have_content('Pendente')
     end
     it 'e não existem existe ordem de serviço cadastrada' do
@@ -48,7 +48,7 @@ describe 'Usuário vê detalhes de uma ordem de serviço' do
      login_as(user)
      visit root_path 
      click_on "Ordem de Serviço"
-     click_on "Detalhes"
+     click_on "Mais detalhes..."
     
      #Assert
     expect(page).to have_content('Código da Entrega: ABC123456789456123')
