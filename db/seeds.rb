@@ -12,6 +12,7 @@ modality_2 = Modality.create!(name: 'On-Demand delivery', minimum_distance: 3, m
 modality_3 = Modality.create!(name: 'Express delivery', minimum_distance: 3, maximum_distance:25, minimum_weight:0, maximum_weight:30, flat_rate:20)
 modality_4 = Modality.create!(name: 'Standart service', minimum_distance: 3, maximum_distance:25, minimum_weight:0, maximum_weight:30, flat_rate:20, modality_status: 1)
 
+
 #usuário Adm
 UserAdm.create!(name: 'Manuela', email: 'manuela@sistemadefrete.com.br', password: 'password')
 

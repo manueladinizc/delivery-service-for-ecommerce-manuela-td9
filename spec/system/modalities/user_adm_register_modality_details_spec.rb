@@ -79,8 +79,8 @@ describe 'Usuário cadastra uma modalidade' do
         find("label", text: "Ativo").click
         click_on 'Enviar'
         #Assert
-        expect(page).to have_content 'Modalidade não cadastrado.'
-        expect(page).to have_content 'Nome não pode ficar em branco'                                       
+        expect(page).to have_content 'Modalidade não cadastrada.'
+        expect(page).to have_content 'Nome da Modalidade não pode ficar em branco'                                       
         expect(page).to have_content 'Distância mínima não pode ficar em branco'                                     
         expect(page).to have_content "Peso máximo não pode ficar em branco"                                          
     end

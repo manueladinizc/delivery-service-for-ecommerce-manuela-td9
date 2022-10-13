@@ -26,5 +26,6 @@ pt-BR:
         delivery_city: "Cidade de entrega"
         customer_name: "Nome do cliente"
         distance: "Distância"
+        modality: "Modalidade"
          
         

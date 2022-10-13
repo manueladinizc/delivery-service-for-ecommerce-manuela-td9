@@ -28,9 +28,10 @@ class ModalitiesController < ApplicationController
     def create
         @modality = Modality.new(modality_params)
         if @modality.save()
+
             redirect_to modalities_path, notice: 'Modalidade cadastrado com sucesso.'
         else
-            flash.now[:notice] = 'Modalidade não cadastrado.'
+            flash.now[:notice] = 'Modalidade não cadastrada.'
             render 'new'
         end 
     end

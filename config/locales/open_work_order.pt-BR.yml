@@ -1,0 +1,14 @@
+pt-BR:        
+  activerecord:
+    models:
+      open_work_order: 
+        one: Ordem se serviço aberta
+        other: Ordens de serviços abertas   
+    attributes:
+      open_work_order:
+        total_price: "Preço total da entrega"
+        deadline_date: "Data prevista de entrega:"
+        modality: "Modalidade"
+        
+         
+        

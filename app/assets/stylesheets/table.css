@@ -5,6 +5,14 @@
     left: 25px;
 }
 
+.table-container-order{
+    width: 700px;
+    margin: 10px;
+    position: relative;
+    left: 25px;
+    text-align: center;
+}
+
  .table-space{
     width: 20%;
     margin: 10px;

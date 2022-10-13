@@ -12,6 +12,27 @@
 </div>
 <% end %>
 
+
+<% if ((@work_order.work_order_status == "progress") || (@work_order.work_order_status == "closed")) %>
+<div class = container-card>  
+  
+  <div class="card" style="width: 40rem;">
+    <div class="card-body">
+        <h5 class="card-title">Detalhes da abertura do serviço: </h5>
+           <strong><%= Modality.human_attribute_name(:name)%>:</strong>
+            <p class="card-text"><%= @modality.name %></p>    
+           <strong><%= OpenWorkOrder.human_attribute_name(:total_price)%> (R$):</strong>
+            <p class="card-text"><%= @open_work_order.total_price %></p> 
+            <strong><%= OpenWorkOrder.human_attribute_name(:deadline_date)%>:</strong>
+            <p class="card-text"><%= @open_work_order.deadline_date.strftime("%d/%m/%Y") %></p>               
+    </div>
+  </div>
+<% end %>
+
+
+
+
+
 <div class = container-card>  
   
   <div class="card" style="width: 40rem;">
@@ -25,7 +46,7 @@
           <br><br>
 
 
-          <h5 style="color: #697486;">Informações do produto:</h5>
+          <h5 style="color: #1C2EDB;">Informações do produto:</h5>
           <strong><%= WorkOrder.human_attribute_name(:product_code)%>:</strong>
             <p class="card-text"><%= @work_order.product_code %></p>          
           <strong><%= WorkOrder.human_attribute_name(:height)%> (cm):</strong>
@@ -37,7 +58,7 @@
           <strong><%= WorkOrder.human_attribute_name(:weight)%> (kg):</strong>
             <p class="card-text"><%= @work_order.weight %></p> 
 
-          <h5 style="color: #697486;">Dados para Retirada:</h5>          
+          <h5 style="color: #1C2EDB;">Dados para Retirada:</h5>          
           <strong><%= WorkOrder.human_attribute_name(:pickup_address)%>:</strong>
             <p class="card-text"><%= @work_order.pickup_address %></p>
           <strong><%= WorkOrder.human_attribute_name(:pickup_city)%>:</strong>
@@ -45,7 +66,7 @@
           <strong><%= WorkOrder.human_attribute_name(:pickup_state)%>:</strong>
             <p class="card-text"><%= @work_order.pickup_state %></p>          
                     
-          <h5 style="color: #697486;">Dados para Entrega:</h5>          
+          <h5 style="color: #1C2EDB;">Dados para Entrega:</h5>          
           <strong><%= WorkOrder.human_attribute_name(:customer_name)%>:</strong>
             <p class="card-text"><%= @work_order.customer_name %></p>
           <strong><%= WorkOrder.human_attribute_name(:delivery_address)%>:</strong>

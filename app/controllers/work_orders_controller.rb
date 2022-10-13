@@ -6,6 +6,13 @@ class WorkOrdersController < ApplicationController
 
     def show
         @work_order = WorkOrder.find(params[:id])
+        
+        if OpenWorkOrder.where(:id => @work_order.id).present?
+            @open_work_order = OpenWorkOrder.find(@work_order.id)
+            @modality = Modality.find(@open_work_order.modality_id)
+        end
+
+
     end
 
     def new

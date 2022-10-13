@@ -8,7 +8,7 @@ pt-BR:
         other: Modalidades     
     attributes:
       modality:
-        name: "Nome"     
+        name: "Nome da Modalidade"     
         minimum_distance: "Distância mínima"     
         maximum_distance: "Distância máxima"     
         minimum_weight: "Peso mínimo"     
@@ -17,4 +17,5 @@ pt-BR:
         modality_status: "Status" 
         activated: "Ativo"
         disabled: "Desativado"   
+        modality: "Modalidade"
         
