@@ -13,7 +13,7 @@
 <% end %>
 
 
-<% if ((@work_order.work_order_status == "progress") || (@work_order.work_order_status == "closed")) %>
+<% if ((@work_order.work_order_status == "progress") || (@work_order.work_order_status == "closed_in") || (@work_order.work_order_status == "closed_out")) %>
 <div class = container-card>  
   
   <div class="card" style="width: 40rem;">

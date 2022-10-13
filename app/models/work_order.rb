@@ -1,5 +1,5 @@
 class WorkOrder < ApplicationRecord
-    enum work_order_status: { pending: 0,  progress: 1, closed: 2 }
+    enum work_order_status: { pending: 0,  progress: 1, closed_in: 2, closed_out: 3 }
 
     before_validation :generate_delivery_code, on: :create
 
