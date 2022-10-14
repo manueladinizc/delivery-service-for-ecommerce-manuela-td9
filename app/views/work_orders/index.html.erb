@@ -35,9 +35,14 @@
       <td>
       <% if w.work_order_status == "pending" %>
         <span class="badge badge-secondary"><%= WorkOrder.human_attribute_name(:pending) %></span>
-      <% else %>        
-        <span class="badge badge-primary"><%= WorkOrder.human_attribute_name(:progress) %></span>
-        <% end %>
+      <% elsif w.work_order_status == "progress"%>        
+        <span class="badge badge-primary"><%= WorkOrder.human_attribute_name(:progress) %></span>        
+      <% elsif w.work_order_status == "closed_in"%>        
+        <span class="badge badge-info"><%= WorkOrder.human_attribute_name(:closed_in) %></span>
+      <% elsif w.work_order_status == "closed_out"%>        
+        <span class="badge badge-warning"><%= WorkOrder.human_attribute_name(:closed_out) %></span>
+        
+      <% end %>
       </td>
       <td><a class="btn btn-primary" href="<%=  work_order_path(w.id) %>" role="button">Mais detalhes...</a></td>
      

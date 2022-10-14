@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :work_orders, only: [:index, :show, :new, :create] do
     resources :open_work_orders, only: [:new, :create]
+    resources :close_work_orders, only: [:new, :create]
   end
   
 

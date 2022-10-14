@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_09_194110) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_13_164307) do
+  create_table "close_work_orders", force: :cascade do |t|
+    t.integer "work_order_id", null: false
+    t.date "delivery_date"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["work_order_id"], name: "index_close_work_orders_on_work_order_id"
+  end
+
   create_table "deadlines", force: :cascade do |t|
     t.integer "initial_interval"
     t.integer "final_interval"
@@ -123,6 +132,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_09_194110) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "close_work_orders", "work_orders"
   add_foreign_key "deadlines", "modalities"
   add_foreign_key "distance_prices", "modalities"
   add_foreign_key "open_work_orders", "modalities"

@@ -1,7 +1,8 @@
 pt-BR:
   pending: "Pendente"
-  progress: "Em andamento"         
-  closed: "Encerrado"         
+  progress: "Em andamento"   
+  closed_in: "Encerrado no prazo"      
+  closed_out: "Encerrado com atraso"         
   activerecord:
     models:
       work_order: 
@@ -10,7 +11,9 @@ pt-BR:
     attributes:
       work_order:
         pending: "Pendente"
-        progress: "Em andamento"   
+        progress: "Em andamento" 
+        closed_in: "Encerrado no prazo"      
+        closed_out: "Encerrado com atraso"  
         closed: "Encerrado"   
         product_code: "Código do produto"
         height: "Altura"

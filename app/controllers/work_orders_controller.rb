@@ -12,6 +12,11 @@ class WorkOrdersController < ApplicationController
             @modality = Modality.find(@open_work_order.modality_id)
         end
 
+        if CloseWorkOrder.where(:id => @work_order.id).present?
+            @close_work_order = CloseWorkOrder.find(@work_order.id)
+            
+        end
+
 
     end
 

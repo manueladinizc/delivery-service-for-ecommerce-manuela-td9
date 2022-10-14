@@ -1,7 +1,7 @@
 class OpenWorkOrdersController < ApplicationController
     
-    def new
-                         
+    def new        
+       
         data_processing
 
         @name_column = ['Modalidade', 'Prazo (dias)', 'Preço (R$)' ]
@@ -13,8 +13,7 @@ class OpenWorkOrdersController < ApplicationController
     def create
         data_processing
 
-        @work_order = WorkOrder.find(params[:work_order_id])
-        
+        @work_order = WorkOrder.find(params[:work_order_id])        
         open_work_order_params = params.require(:open_work_order).permit(:modality_id,  :total_price, :deadline_date)
 
         @open_work_order = OpenWorkOrder.new(open_work_order_params)
@@ -25,13 +24,13 @@ class OpenWorkOrdersController < ApplicationController
         @open_work_order.deadline_date = (@time_deadline[position]).days.from_now
                 
         @open_work_order.work_order = @work_order
-                        
+           
       if @open_work_order.save!
          @work_order.progress!
         redirect_to @work_order, notice: 'Ordem iniciada com sucesso'
       else 
         @open_work_order = OpenWorkOrder.all
-        flash.now[:notice] = "Não foi possivel isiciar ordem"
+        flash.now[:notice] = "Não foi possivel iniciar ordem"
         redirect_to @work_order
       end
     end

@@ -1,15 +1,21 @@
 class ModalitiesController < ApplicationController
     
     #before_action :set_modality, only: [:edit, :update, :show]
+#     before_action :authenticate!
+ 
     
     
 #     def authenticate!
-#   if @current_user == user_admin 
+#   if @current_user == current_user_adm 
 #       authenticate_user_admin!
-#   elsif @current_user == user_regular
+#   elsif @current_user == current_user_regular
 #       authenticate_user_regular!
 #   end
-# end
+#  end
+    
+
+    
+   
 
     def show
         @modality = Modality.find(params[:id])
