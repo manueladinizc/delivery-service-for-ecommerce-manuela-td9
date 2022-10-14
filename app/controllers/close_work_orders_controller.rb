@@ -1,4 +1,5 @@
 class CloseWorkOrdersController < ApplicationController
+    before_action :authenticate_any!
     def new
         @work_order = WorkOrder.find(params[:work_order_id])        
         @close_work_order = CloseWorkOrder.new()

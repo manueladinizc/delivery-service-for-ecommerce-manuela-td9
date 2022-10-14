@@ -6,6 +6,13 @@
   </div>
 </nav>
 
+
+<div class="btnAdd-work-order">
+  <a class="btn btn-secondary" href="<%= search_field_work_orders_path %>" role="button">Buscar Ordem de Serviço</a>
+</div>
+<br>
+
+
 <% if user_adm_signed_in? %>
 <div class="btnAdd-work-order">
   <a class="btn btn-primary" href="<%= new_work_order_path %>" role="button">Criar Ordem de Serviço</a>

@@ -1,6 +1,6 @@
 class VehiclesController < ApplicationController
     before_action :set_vehicle, only: [:edit, :update]
-    
+    before_action :authenticate_any!
     def index 
         @vehicles = Vehicle.all
         

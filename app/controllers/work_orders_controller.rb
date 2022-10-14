@@ -1,4 +1,6 @@
 class WorkOrdersController < ApplicationController
+    
+    before_action :authenticate_any!, only: [:index, :show, :new]
     def index
         
         @work_orders = WorkOrder.all
@@ -34,4 +36,31 @@ class WorkOrdersController < ApplicationController
             render 'new'
         end
     end
+
+    def search_field
+
+    end
+
+    def search       
+        @delivery_code = params["query"]
+        @work_order = WorkOrder.find_by(delivery_code: params["query"])      
+         
+        
+
+        if OpenWorkOrder.where(:id => @work_order.id).present?
+            @open_work_order = OpenWorkOrder.find(@work_order.id)
+            @modality = Modality.find(@open_work_order.modality_id)
+        end
+
+        
+     
+        if CloseWorkOrder.where(:id => @work_order.id).present?
+            @close_work_order = CloseWorkOrder.find(@work_order.id)
+            @close_work_order.delivery_date
+        end
+
+       
+    end
+
+
 end

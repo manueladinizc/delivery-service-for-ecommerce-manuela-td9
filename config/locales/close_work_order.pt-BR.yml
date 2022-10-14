@@ -1,0 +1,10 @@
+pt-BR:        
+  activerecord:
+    models:
+      close_work_order: 
+        one: Ordem se serviço encerradas
+        other: Ordens de serviços encerradas   
+    attributes:
+      close_work_order:        
+        description: "Motivo em caso de atraso"
+        delivery_date: "Data em que o pedido foi entregue"

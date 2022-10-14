@@ -7,7 +7,7 @@ pt-BR:
     attributes:
       open_work_order:
         total_price: "Preço total da entrega"
-        deadline_date: "Data prevista de entrega:"
+        deadline_date: "Data prevista de entrega"
         modality: "Modalidade"
         
          

@@ -1,5 +1,5 @@
 class OpenWorkOrdersController < ApplicationController
-    
+    before_action :authenticate_any!
     def new        
        
         data_processing
