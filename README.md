@@ -3,6 +3,7 @@
 A plataforma tem o objetivo de gerenciar uma frota de entrega para um e-commerce, a partir do cadastro de novos pedidos de frete (ordens de serviço) e fazer os cálculos de frete de acordo com os tipos de transporte que atendem ao perfil do pedido. É possível controlar as ordens de serviço em andamento, encerrar ordens de serviço e consultar o status da frota de veículos da empresa.
 
 A evolução e backlog do projeto pode ser acompanhado pelas ferramentas abaixo:
+
 -GitHub Project: https://github.com/users/manueladinizc/projects/1/views/2
 
 -Trello: https://trello.com/invite/b/I98f4y2Q/b646e85996126c27533b9aca0c799240/treinadev-sistema-de-frete 
@@ -46,6 +47,7 @@ A evolução e backlog do projeto pode ser acompanhado pelas ferramentas abaixo:
 
 * Baixe e acesso o repositório através dos comandos comandos:
 `git clone https://github.com/manueladinizc/delivery-service-for-ecommerce-manuela-td9.git`
+
 `cd delivery-service-for-ecommerce-manuela-td9`
 
 * A versão utilizada para esse projeto foi `ruby 3.1.0`. Em caso de diferença de versões, instale a versão referente ao projeto. 
@@ -54,21 +56,24 @@ A evolução e backlog do projeto pode ser acompanhado pelas ferramentas abaixo:
 `rails db:migration`
 
 * Popular o db:
+
 `rails db:seed`
 
 * Inicie o servidor:
 `rails s`
 
 * Para acessar como usuário administrador:
-    login: manuela@sistemadefrete.com.br
-    senha: password
+    - login: manuela@sistemadefrete.com.br
+    - senha: password
 
 * Para acessar como usuário regular:
-        login: manu@sistemadefrete.com.br
-        senha: password
+    - login: manu@sistemadefrete.com.br
+    - senha: password
 
 # Observação
 
 * O preço final foi calculado da seguinte maneira:
-     Através do peso e distância fornecida na ordem de serviço
-    `Preço total = (taxa pelo peso * distância) + taxa da distância + taxa fixa`
+
+     - Através do peso e distância fornecida na ordem de serviço
+     
+     `Preço total = (taxa pelo peso * distância) + taxa da distância + taxa fixa`
