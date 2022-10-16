@@ -46,6 +46,7 @@ A evolução e backlog do projeto pode ser acompanhado pelas ferramentas abaixo:
 ## Acesso as funcionalidades da plataforma
 
 * Baixe e acesso o repositório através dos comandos comandos:
+
 `git clone https://github.com/manueladinizc/delivery-service-for-ecommerce-manuela-td9.git`
 
 `cd delivery-service-for-ecommerce-manuela-td9`
@@ -53,6 +54,7 @@ A evolução e backlog do projeto pode ser acompanhado pelas ferramentas abaixo:
 * A versão utilizada para esse projeto foi `ruby 3.1.0`. Em caso de diferença de versões, instale a versão referente ao projeto. 
 
 * Execute as 'migration':
+
 `rails db:migration`
 
 * Popular o db:
@@ -60,6 +62,7 @@ A evolução e backlog do projeto pode ser acompanhado pelas ferramentas abaixo:
 `rails db:seed`
 
 * Inicie o servidor:
+
 `rails s`
 
 * Para acessar como usuário administrador:
@@ -76,4 +79,4 @@ A evolução e backlog do projeto pode ser acompanhado pelas ferramentas abaixo:
 
      - Através do peso e distância fornecida na ordem de serviço
      
-     `Preço total = (taxa pelo peso * distância) + taxa da distância + taxa fixa`
+     `Preço total = (valor por km * distância) + taxa da distância + taxa fixa`
