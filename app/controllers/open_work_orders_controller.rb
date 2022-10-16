@@ -47,6 +47,7 @@ class OpenWorkOrdersController < ApplicationController
         @deadlines = Deadline.all
         @weight_prices = WeightPrice.all
         @distance_prices = DistancePrice.all
+        
         @weight_value = WeightPrice.where('initial_weight <= :value AND final_weight >= :value', value: @work_order.weight)
         
         @distance_value = DistancePrice.where('initial_distance <= :value AND final_distance >= :value', value: @work_order.distance)
@@ -89,7 +90,7 @@ class OpenWorkOrdersController < ApplicationController
         i=0
         @total_price_values=[]
         while i < @tax_weight.length do
-            @total_price_values[i] = (@work_order.weight * @tax_weight[i]) + @tax_distance[i]  + @tax_modality[i]
+            @total_price_values[i] = (@work_order.distance * @tax_weight[i]) + @tax_distance[i]  + @tax_modality[i]
             i+=1
         end
 

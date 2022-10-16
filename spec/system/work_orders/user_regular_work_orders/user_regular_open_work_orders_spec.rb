@@ -41,7 +41,7 @@ describe 'Usuário inicia uma ordem de serviço pendente' do
     expect(page).to have_content('Em andamento')
     expect(page).to have_content('Detalhes da abertura do serviço:')
     expect(page).to have_content("Nome da Modalidade:\nShip from store")
-    expect(page).to have_content("Preço total da entrega (R$):\n744")
+    expect(page).to have_content("Preço total da entrega (R$):\n924")
     expect(page).to have_content("Data prevista de entrega:")
     expect(page).to have_content(5.days.from_now.strftime("%d/%m/%Y"))
     expect(page).to have_content('Informações do produto:')
