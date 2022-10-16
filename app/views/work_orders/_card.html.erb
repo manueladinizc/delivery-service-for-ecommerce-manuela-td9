@@ -32,7 +32,11 @@
            <strong><%= CloseWorkOrder.human_attribute_name(:delivery_date)%>:</strong>
             <p class="card-text"><%= @close_work_order.delivery_date.strftime("%d/%m/%Y") %></p>    
            <strong><%= CloseWorkOrder.human_attribute_name(:description)%>:</strong>
-            <p class="card-text"><%= @close_work_order.description %></p>   
+            <% if @close_work_order.description.empty?%>
+              <p class="card-text">Não há registro de motivo</p> 
+            <% else %>  
+              <p class="card-text"><%= @close_work_order.description %></p>  
+            <% end %> 
   <% end %> 
 <% end %>
     

@@ -1,8 +1,6 @@
-class WorkOrdersController < ApplicationController
-    
-    before_action :authenticate_any!, only: [:index, :show, :new]
-    def index
-        
+class WorkOrdersController < ApplicationController    
+    before_action :authenticate_any!, only: [:index, :show, :new, :pending]
+    def index        
         @work_orders = WorkOrder.all
     end
 
@@ -63,5 +61,8 @@ class WorkOrdersController < ApplicationController
         end               
     end
 
+    def pending
+        @work_orders = WorkOrder.where('work_order_status = :value', value: 0)
+    end
 
 end

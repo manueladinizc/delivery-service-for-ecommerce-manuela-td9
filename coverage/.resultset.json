@@ -232,6 +232,7 @@
           1,
           1,
           1,
+          1,
           null,
           null,
           null,
@@ -2075,10 +2076,8 @@
       "/home/manudc/desafios3/delivery-service-for-ecommerce-manuela-td9/app/controllers/work_orders_controller.rb": {
         "lines": [
           1,
-          null,
           1,
           1,
-          null,
           7,
           null,
           null,
@@ -2121,6 +2120,15 @@
           0,
           0,
           null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
           null,
           null,
           0,
@@ -2130,19 +2138,14 @@
           null,
           null,
           null,
+          1,
           0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1665878951
+    "timestamp": 1665886354
   }
 }

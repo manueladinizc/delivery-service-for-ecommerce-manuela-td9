@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :close_work_orders, only: [:new, :create]
     get 'search_field', on: :collection
     get 'search', on: :collection
+    get 'pending', on: :collection
   end
   
 

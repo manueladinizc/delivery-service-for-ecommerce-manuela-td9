@@ -6,26 +6,10 @@
   </div>
 </nav>
 
-<div class="btnAdd-work-order">
-  <div class="btn-group" role="group" aria-label="Basic outlined example">
-    <a type="button" class="btn btn-outline-dark" href="<%= search_field_work_orders_path %>">Buscar Ordem de Serviço</a>
-    <% if user_adm_signed_in? %>
-      <a type="button" class="btn btn-outline-dark" href="<%= new_work_order_path %>">Criar Ordem de Serviço</a>
-    <% end %>
-    <% if user_regular_signed_in? %>
-      <a type="button" class="btn btn-outline-dark" href="<%= pending_work_orders_path %>">Ver apenas ordens de serviço pendentes</a>
-    <% end %>
-  </div>
-</div>
-<br>
-
-
-
-
 <% if @work_orders.empty? %>
   <div class="alertField">
     <div class="alert alert-warning" role="alert">
-      Não existe ordem de serviço cadastrada
+      Não existe ordens de serviço pendente
     </div>
   </div>
 <% else %>
