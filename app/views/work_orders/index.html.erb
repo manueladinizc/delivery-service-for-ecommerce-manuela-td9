@@ -8,7 +8,7 @@
 
 
 <div class="btnAdd-work-order">
-  <a class="btn btn-secondary" href="<%= search_field_work_orders_path %>" role="button">Buscar Ordem de Serviço</a>
+  <a class="btn btn-dark" href="<%= search_field_work_orders_path %>" role="button">Buscar Ordem de Serviço</a>
 </div>
 <br>
 
@@ -43,15 +43,15 @@
       <% if w.work_order_status == "pending" %>
         <span class="badge badge-secondary"><%= WorkOrder.human_attribute_name(:pending) %></span>
       <% elsif w.work_order_status == "progress"%>        
-        <span class="badge badge-primary"><%= WorkOrder.human_attribute_name(:progress) %></span>        
+        <span class="badge badge-dark"><%= WorkOrder.human_attribute_name(:progress) %></span>        
       <% elsif w.work_order_status == "closed_in"%>        
-        <span class="badge badge-info"><%= WorkOrder.human_attribute_name(:closed_in) %></span>
+        <span class="badge badge-primary"><%= WorkOrder.human_attribute_name(:closed_in) %></span>
       <% elsif w.work_order_status == "closed_out"%>        
         <span class="badge badge-warning"><%= WorkOrder.human_attribute_name(:closed_out) %></span>
         
       <% end %>
       </td>
-      <td><a class="btn btn-primary" href="<%=  work_order_path(w.id) %>" role="button">Mais detalhes...</a></td>
+      <td><a class="btn btn-outline-primary" href="<%=  work_order_path(w.id) %>" role="button">Mais detalhes...</a></td>
      
     </tr>
  <% end %>

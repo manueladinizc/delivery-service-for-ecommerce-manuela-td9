@@ -6,5 +6,6 @@
   </div>
 </nav>
 
-
+<% unless @delivery_code.blank? %> 
 <%= render 'card' %>
+<% end %>

@@ -5,9 +5,9 @@
             <% if @work_order.work_order_status == "pending" %>
         <span class="badge badge-secondary"><%= WorkOrder.human_attribute_name(:pending) %></span>
       <% elsif  @work_order.work_order_status == "progress"%>        
-        <span class="badge badge-primary"><%= WorkOrder.human_attribute_name(:progress) %></span>        
+        <span class="badge badge-dark"><%= WorkOrder.human_attribute_name(:progress) %></span>        
       <% elsif  @work_order.work_order_status == "closed_in"%>        
-        <span class="badge badge-info"><%= WorkOrder.human_attribute_name(:closed_in) %></span>
+        <span class="badge badge-primary"><%= WorkOrder.human_attribute_name(:closed_in) %></span>
       <% elsif  @work_order.work_order_status == "closed_out"%>        
         <span class="badge badge-warning"><%= WorkOrder.human_attribute_name(:closed_out) %></span>
         
