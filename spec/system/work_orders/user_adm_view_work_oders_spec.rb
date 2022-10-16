@@ -6,12 +6,12 @@ describe 'Usuário visita página de ordem de serviço' do
         user = UserAdm.create!(name: 'Manuela', email: 'manuela@sistemadefrete.com.br', password: 'password')
 
         allow(SecureRandom).to receive(:alphanumeric).with(15).and_return('ABC123456789456123')
-        WorkOrder.create!(pickup_address: "Rua da Saudade, 10", pickup_city: 'Recife', pickup_state: "PE", product_code: "12345A", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 252", customer_name: "João", delivery_city: "Recife", delivery_state: 'PE', distance:100)
+        WorkOrder.create!(pickup_address: "Rua da Saudade, 10", pickup_city: 'Recife', pickup_state: "PE", product_code: "12345ADC", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 252", customer_name: "João", delivery_city: "Recife", delivery_state: 'PE', distance:100)
         
         
         #Act
-        login_as(user)
         visit root_path 
+        login_adm(user)
         click_on "Ordem de Serviço"
 
         #Assert
@@ -28,8 +28,8 @@ describe 'Usuário visita página de ordem de serviço' do
                 
          
          #Act
-         login_as(user)
          visit root_path 
+         login_adm(user)
          click_on "Ordem de Serviço"
         #Assert
         expect(page).to have_content('Não existe ordem de serviço cadastrada')
@@ -42,11 +42,11 @@ describe 'Usuário vê detalhes de uma ordem de serviço' do
      user = UserAdm.create!(name: 'Manuela', email: 'manuela@sistemadefrete.com.br', password: 'password')
 
      allow(SecureRandom).to receive(:alphanumeric).with(15).and_return('ABC123456789456123')
-     WorkOrder.create!(pickup_address: "Rua da Saudade, 10", pickup_city: 'Recife', pickup_state: "PE", product_code: "12345A", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 252", customer_name: "João", delivery_city: "Recife", delivery_state: 'PE', distance:100)     
+     WorkOrder.create!(pickup_address: "Rua da Saudade, 10", pickup_city: 'Recife', pickup_state: "PE", product_code: "12345ADC", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 252", customer_name: "João", delivery_city: "Recife", delivery_state: 'PE', distance:100)     
      
      #Act
-     login_as(user)
      visit root_path 
+     login_adm(user)
      click_on "Ordem de Serviço"
      click_on "Mais detalhes..."
     

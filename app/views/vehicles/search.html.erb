@@ -14,37 +14,42 @@
   </div>
 </nav>
 
-<div class="alert-search">
-<div class="alert alert-light" >
-  <strong><%= @vehicles.count %> <%= Vehicle.model_name.human(count: @vehicles.count).downcase %> <%= I18n.translate(:found, count: @vehicles.count) %></strong>
-</div>
-</div>
 
-<div class = container-card>  
-    <% @vehicles.each do |v| %>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title"><%= v.car_model %></h5>
-           <% if v.car_status == "operation" %>
-            <span class="badge badge-success"><%= Vehicle.human_attribute_name(:operation) %></span>
-          <% else %>  
-            <span class="badge badge-danger"><%= Vehicle.human_attribute_name(:maintenance)%></span>
-          <% end %>
-          <br>
-        <strong><%= Vehicle.human_attribute_name(:brand)%>:</strong>
-        <p class="card-text"><%= v.brand %></p>
-        <strong><%= Vehicle.human_attribute_name(:model_year)%>:</strong>
-        <p class="card-text"><%= v.model_year %></p>
-        <strong><%= Vehicle.human_attribute_name(:registration_plate)%>:</strong>
-        <p class="card-text"><%= v.registration_plate %></p>
-        <strong><%= Vehicle.human_attribute_name(:weight_capacity)%>:</strong>
-        <p class="card-text"><%= v.weight_capacity %>Kg</p>
-        <strong><%= Vehicle.human_attribute_name(:modality_id)%>:</strong>
-        <p class="card-text"><%= v.modality.name %> </p>
-         <% if user_adm_signed_in? %>           
-          <a href="<%= edit_vehicle_path(v.id) %>" class="btn btn-primary">Editar</a>
-        <% end %>
-    </div>
+<% unless @registration_plate.blank? %> 
+
+ <div class="alert-search">
+  <div class="alert alert-light" >
+    <strong><%= @vehicles.count %> <%= Vehicle.model_name.human(count: @vehicles.count).downcase %> <%= I18n.translate(:found, count: @vehicles.count) %></strong>
   </div>
+  </div>
+
+  <div class = container-card>  
+      <% @vehicles.each do |v| %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+          <h5 class="card-title"><%= v.car_model %></h5>
+            <% if v.car_status == "operation" %>
+              <span class="badge badge-success"><%= Vehicle.human_attribute_name(:operation) %></span>
+            <% else %>  
+              <span class="badge badge-danger"><%= Vehicle.human_attribute_name(:maintenance)%></span>
+            <% end %>
+            <br>
+          <strong><%= Vehicle.human_attribute_name(:brand)%>:</strong>
+          <p class="card-text"><%= v.brand %></p>
+          <strong><%= Vehicle.human_attribute_name(:model_year)%>:</strong>
+          <p class="card-text"><%= v.model_year %></p>
+          <strong><%= Vehicle.human_attribute_name(:registration_plate)%>:</strong>
+          <p class="card-text"><%= v.registration_plate %></p>
+          <strong><%= Vehicle.human_attribute_name(:weight_capacity)%>:</strong>
+          <p class="card-text"><%= v.weight_capacity %>Kg</p>
+          <strong><%= Vehicle.human_attribute_name(:modality_id)%>:</strong>
+          <p class="card-text"><%= v.modality.name %> </p>
+          <% if user_adm_signed_in? %>           
+            <a href="<%= edit_vehicle_path(v.id) %>" class="btn btn-primary">Editar</a>
+          <% end %>
+      </div>
+    </div>
+  <% end %>
+ </div>
+
 <% end %>
-</div>

@@ -1,23 +1,5 @@
 class ModalitiesController < ApplicationController
-    
-    #before_action :set_modality, only: [:edit, :update, :show]
-    before_action :authenticate_any!
- 
-    
-    
-#     def check_user_type
-#   if @current_user == current_user_adm 
-#       authenticate_user_admin!
-#   elsif @current_user == current_user_regular
-#       authenticate_user_regular!
-#   end
-#  end
-
-
-    
-
-    
-   
+     before_action :authenticate_any!   
 
     def show
         @modality = Modality.find(params[:id])
@@ -59,15 +41,7 @@ class ModalitiesController < ApplicationController
             end
     end
 
-
-
-
-
     private
-    # def set_modality 
-    #     @modality = Modality.find(params[:id])
-    # end    
-
     def modality_params
         params.require(:modality).permit(:name, :minimum_distance, :maximum_distance, :minimum_weight, :maximum_weight, :flat_rate, :modality_status) 
     end

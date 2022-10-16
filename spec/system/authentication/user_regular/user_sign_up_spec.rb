@@ -19,4 +19,19 @@ describe 'Usuário se autentica' do
         user = UserRegular.last 
         expect(user.name).to eq 'Manuela'
     end
+    it 'com email fora do domain permitido' do
+        #Arrange
+        #Act
+        visit root_path
+        click_on 'Entrar como usuário regular'
+        click_on 'Criar uma conta'       
+        fill_in 'Nome', with: 'Manuela'
+        fill_in 'E-mail', with: 'manu@frete.com.br'
+        fill_in 'Senha', with: 'password'
+        fill_in 'Confirme sua senha', with: 'password'
+        click_on 'Criar conta'
+        #Assert
+        expect(page).to have_content 'Não foi possível salvar usuário: 1 erro'
+        expect(page).to have_content 'Email deve possuir domain: @sistemadefrete.com.br'        
+    end
 end

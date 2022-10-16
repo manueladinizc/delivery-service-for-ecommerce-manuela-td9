@@ -107,14 +107,14 @@ Deadline.create!(initial_interval:51, final_interval:150, duration:7, modality: 
 Deadline.create!(initial_interval:151, final_interval:800, duration:9, modality: modality_4 )
 Deadline.create!(initial_interval:801, final_interval:1500, duration:12, modality: modality_4 )
 
-WorkOrder.create!(pickup_address: "Rua da Saudade, 10", pickup_city: 'Recife', pickup_state: "PE", product_code: "12345A", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 252", customer_name: "João", delivery_city: "Recife", delivery_state: 'PE', distance:100)
+WorkOrder.create!(pickup_address: "Rua da Saudade, 10", pickup_city: 'Recife', pickup_state: "PE", product_code: "12345ABD", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 252", customer_name: "João", delivery_city: "Recife", delivery_state: 'PE', distance:100)
 
-WorkOrder.create!(pickup_address: "Rua das Fronteiras, 18", pickup_city: 'Recife', pickup_state: "PE", product_code: "18845A", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 1000", customer_name: "Carolina", delivery_city: "Recife", delivery_state: 'PE', distance:10)
+WorkOrder.create!(pickup_address: "Rua das Fronteiras, 18", pickup_city: 'Recife', pickup_state: "PE", product_code: "18845ABD", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 1000", customer_name: "Carolina", delivery_city: "Recife", delivery_state: 'PE', distance:10)
 
-WorkOrder.create!(pickup_address: "Rua da lua, 87", pickup_city: 'Recife', pickup_state: "PE", product_code: "52785A", height:50, width:50, depth:60, weight:150, delivery_address: "Av. Boa viagem, 1000", customer_name: "Caio", delivery_city: "Recife", delivery_state: 'PE', distance:406)
+WorkOrder.create!(pickup_address: "Rua da lua, 87", pickup_city: 'Recife', pickup_state: "PE", product_code: "52785ABD", height:50, width:50, depth:60, weight:150, delivery_address: "Av. Boa viagem, 1000", customer_name: "Caio", delivery_city: "Recife", delivery_state: 'PE', distance:406)
 
-WorkOrder.create!(pickup_address: "Rua torta, 587", pickup_city: 'Recife', pickup_state: "PE", product_code: "82845A", height:50, width:50, depth:60, weight:950, delivery_address: "Av. Boa viagem, 1000", customer_name: "Camila", delivery_city: "Recife", delivery_state: 'PE', distance:350)
+WorkOrder.create!(pickup_address: "Rua torta, 587", pickup_city: 'Recife', pickup_state: "PE", product_code: "82845ABD", height:50, width:50, depth:60, weight:950, delivery_address: "Av. Boa viagem, 1000", customer_name: "Camila", delivery_city: "Recife", delivery_state: 'PE', distance:350)
 
-WorkOrder.create!(pickup_address: "Rua da Mariana Batista, 789", pickup_city: 'Recife', pickup_state: "PE", product_code: "284458", height:50, width:50, depth:60, weight:369, delivery_address: "Av. Boa viagem, 800", customer_name: "Marcos", delivery_city: "Recife", delivery_state: 'PE', distance:250)
+WorkOrder.create!(pickup_address: "Rua da Mariana Batista, 789", pickup_city: 'Recife', pickup_state: "PE", product_code: "284458BD", height:50, width:50, depth:60, weight:369, delivery_address: "Av. Boa viagem, 800", customer_name: "Marcos", delivery_city: "Recife", delivery_state: 'PE', distance:250)
 
-WorkOrder.create!(pickup_address: "Rua da Menina, 7874", pickup_city: 'Recife', pickup_state: "PE", product_code: "5284SJ", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 800", customer_name: "Marcos", delivery_city: "Recife", delivery_state: 'PE', distance:57)
+WorkOrder.create!(pickup_address: "Rua da Menina, 7874", pickup_city: 'Recife', pickup_state: "PE", product_code: "5284SJBD", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 800", customer_name: "Marcos", delivery_city: "Recife", delivery_state: 'PE', distance:57)

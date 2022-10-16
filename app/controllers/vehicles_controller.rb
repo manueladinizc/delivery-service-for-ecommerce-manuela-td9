@@ -41,7 +41,14 @@ class VehiclesController < ApplicationController
 
     def search       
         @registration_plate = params["query"]
-        @vehicles = Vehicle.where("registration_plate LIKE ?", "%#{@registration_plate}%" )         
+        
+        if @registration_plate.blank?
+            flash[:notice] = 'Não há resultado para essa busca'
+        else  
+            @vehicles = Vehicle.where("registration_plate LIKE ?", "%#{@registration_plate}%" )         
+            
+        end
+    
     end
 
 

@@ -12,8 +12,8 @@ describe 'Usuário visita página de tabela de preços por distância' do
         DistancePrice.create!(initial_distance:150, final_distance:800, distance_rate:20, modality: modality_1 )
         
         #Act
-        login_as(user)
         visit root_path 
+        login_adm(user)
         click_on "Modalidades"
         click_on "Tabelas de preços"
         click_on "Acessar tabela de configuração do preço por distância"
@@ -33,8 +33,8 @@ describe 'Usuário visita página de tabela de preços por distância' do
 
         modality_1 = Modality.create!(name: 'Ship from store', minimum_distance: 11, maximum_distance:50, minimum_weight:10, maximum_weight:100, flat_rate:15)
         #Act
-        login_as(user)
         visit root_path 
+        login_adm(user)
         click_on "Modalidades"
         click_on "Tabelas de preços"
         click_on "Acessar tabela de configuração do preço por peso"

@@ -9,8 +9,8 @@ describe 'Usuário visita página de veículos' do
 
         Vehicle.create!(registration_plate: 123456, brand: "Mercedes-Benz", car_model: "Sprinter", model_year: 2017, weight_capacity:300, car_status:0, modality: modality)
         #Act
-        login_as(user)
         visit root_path 
+        login_adm(user)
         click_on "Veículos"
 
         #Assert
@@ -21,8 +21,8 @@ describe 'Usuário visita página de veículos' do
         #Arrange
         user = UserAdm.create!(name: 'Manuela', email: 'manuela@sistemadefrete.com.br', password: 'password')
         #Act
-        login_as(user)
         visit root_path
+        login_adm(user)
         click_on "Veículos"
         #Assert
         expect(page).to have_content('Não existe veículos cadastradas')
@@ -38,8 +38,8 @@ describe 'Usuário vê detalhes de um veículo' do
 
         Vehicle.create!(registration_plate: 123456, brand: "Mercedes-Benz", car_model: "Sprinter", model_year: 2017, weight_capacity:300, car_status:0, modality: modality)
         #Act
-        login_as(user)
         visit root_path
+        login_adm(user)
         click_on "Veículos"
         #Assert
         expect(page).to have_content("Sprinter")

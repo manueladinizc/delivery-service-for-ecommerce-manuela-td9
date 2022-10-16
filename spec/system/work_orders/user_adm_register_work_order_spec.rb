@@ -49,7 +49,7 @@ describe 'Usuário cadastra uma ordem de serviço' do
               
         click_on 'Ordem de Serviço'
         click_on 'Criar Ordem de Serviço' 
-        fill_in 'Código do produto', with: '12345A'
+        fill_in 'Código do produto', with: '12345ADV'
         fill_in 'Altura', with: 80
         fill_in 'Comprimento', with: 50
         fill_in 'Profundidade', with: 10
@@ -90,7 +90,7 @@ describe 'Usuário cadastra uma ordem de serviço' do
         click_on 'Ordem de Serviço'
         click_on 'Criar Ordem de Serviço' 
 
-        fill_in 'Código do produto', with: '12345A'
+        fill_in 'Código do produto', with: '12345ADV'
         fill_in 'Altura', with: 80
         fill_in 'Comprimento', with: 50
         fill_in 'Profundidade', with: 10

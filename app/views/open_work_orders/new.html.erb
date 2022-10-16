@@ -7,15 +7,13 @@
 </nav>
 
 
-<%# <% if @work_orders.empty? %>
-  <%# <div class="alertField">
-    <div class="alert alert-warning" role="alert">
-      Não existe ordem de serviço cadastrada
-    </div>
-  </div> %>
-  <%# <% else %>
+<% if  @modality_group.empty? %>
+<div class="alertField">
+    <div class = "alert alert-primary">Nenhuma modalidade pode atender a essa solicitação</div>
+</div>
 
-      
+
+<% else %>      
 <div class="table-container-prices">
   <table class="table table-hover table-bordered" >
   <thead>
@@ -36,7 +34,6 @@
 
   <br>
 <p>Selecione a Moldalidade desejada de acordo com os preços da tabela e clique em 'Gravar'</p>
-
 <%= form_with(model: [@work_order, @open_work_order]) do |f| %>
   <div class="container-form-modality">
   <div class="form-group col-md-6">
@@ -48,5 +45,5 @@
   </div>
   </div>
 <% end %> 
-
 <br>
+<% end %> 

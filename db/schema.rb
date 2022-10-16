@@ -90,7 +90,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_13_164307) do
   end
 
   create_table "vehicles", force: :cascade do |t|
-    t.integer "registration_plate"
+    t.string "registration_plate"
     t.string "brand"
     t.string "car_model"
     t.integer "model_year"

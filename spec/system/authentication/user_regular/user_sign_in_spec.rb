@@ -37,7 +37,7 @@ describe 'Usuário se autentica' do
         expect(page).to have_content 'Logout efetuado com sucesso.'
         expect(page).to have_content 'Entrar como usuário administrador'
         expect(page).to have_content 'Entrar como usuário regular'
-        #expect(page).to have_content 'Consultar entrega'
+        expect(page).to have_content 'Consultar entrega'
         expect(page).not_to have_button 'Sair'
         expect(page).not_to have_content 'manuela@sistemadefrete.com.br'
 end
