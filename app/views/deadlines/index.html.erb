@@ -6,18 +6,26 @@
   </div>
 </nav>
 
+
+<% if @deadlines.empty? %>
+
 <div class="btnAdd">
-  <a class="btn btn-outline-danger" href="<%= modality_path(@deadline.modality_id) %>" role="button">Voltar</a>
+  <a class="btn btn-outline-danger" href="<%= modalities_path %>" role="button">Voltar</a>
 </div>
 <br>
 
-<% if @deadlines.empty? %>
   <div class="alertField">
     <div class="alert alert-warning" role="alert">
       Não existe dados para a tabela
     </div>
   </div>
 <% else %>
+
+<div class="btnAdd">
+  <a class="btn btn-outline-danger" href="<%= modality_path(@deadline) %>" role="button">Voltar</a>
+</div>
+<br>
+
 <div class="table-container">
 <table class="table table-hover table-bordered">
 <thead>
