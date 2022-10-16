@@ -20,28 +20,21 @@ UserAdm.create!(name: 'Manuela', email: 'manuela@sistemadefrete.com.br', passwor
 UserRegular.create!(name: 'Manu', email: 'manu@sistemadefrete.com.br', password: 'password')
 
 #Vehicle
+#modality_1
 Vehicle.create!(registration_plate: 123456, brand: "Mercedes-Benz", car_model: "Sprinter", model_year: 2017, weight_capacity:300, car_status:0, modality: modality_1)
-
 Vehicle.create!(registration_plate: 987456, brand: "Kia", car_model: "Bongo", model_year: 2019, weight_capacity:800, car_status:0, modality: modality_1)
-
 Vehicle.create!(registration_plate: 123987, brand: "Renault", car_model: "Master", model_year: 2020, weight_capacity:500, car_status:1, modality: modality_1)
-
+#modality_2
 Vehicle.create!(registration_plate: 145456, brand: "Kia", car_model: "Bongo", model_year: 2019, weight_capacity:800, car_status:0, modality: modality_2)
-
 Vehicle.create!(registration_plate: 993987, brand: "Renault", car_model: "Master", model_year: 2020, weight_capacity:500, car_status:1, modality: modality_2)
-
 Vehicle.create!(registration_plate: 900987, brand: "Renault", car_model: "Master", model_year: 2020, weight_capacity:500, car_status:0, modality: modality_2)
-
+#modality_3
 Vehicle.create!(registration_plate: 115456, brand: "Kia", car_model: "Bongo", model_year: 2019, weight_capacity:800, car_status:0, modality: modality_3)
-
 Vehicle.create!(registration_plate: 223987, brand: "Renault", car_model: "Master", model_year: 2020, weight_capacity:500, car_status:1, modality: modality_3)
-
 Vehicle.create!(registration_plate: 220987, brand: "Renault", car_model: "Master", model_year: 2020, weight_capacity:500, car_status:0, modality: modality_3)
-
+#modality_4
 Vehicle.create!(registration_plate: 885456, brand: "Kia", car_model: "Bongo", model_year: 2019, weight_capacity:800, car_status:0, modality: modality_4)
-
 Vehicle.create!(registration_plate: 789987, brand: "Renault", car_model: "Master", model_year: 2020, weight_capacity:500, car_status:1, modality: modality_4)
-
 Vehicle.create!(registration_plate: 452456, brand: "Mercedes-Benz", car_model: "Sprinter", model_year: 2017, weight_capacity:300, car_status:0, modality: modality_4)
 
 
