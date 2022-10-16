@@ -6,9 +6,13 @@
   </div>
 </nav>
 
+<div class="btnAdd">
+  <a class="btn btn-outline-danger" href="<%= work_orders_path %>" role="button">Voltar</a>
+</div>
+<br>
 <% if @work_order.work_order_status == "pending" %>
 <div class="btnAdd">
-  <a class="btn btn-primary" href="<%= new_work_order_open_work_order_path(work_order_id: @work_order.id) %>" role="button">Iniciar Ordem de Serviço</a>
+  <a class="btn btn-primary"  href="<%= new_work_order_open_work_order_path(work_order_id: @work_order.id) %>" role="button">Iniciar Ordem de Serviço</a>
 </div>
 <% end %>
 

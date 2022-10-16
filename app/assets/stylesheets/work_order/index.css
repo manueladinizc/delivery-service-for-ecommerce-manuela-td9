@@ -2,3 +2,11 @@
     position: relative;
     left: 35px;    
 }
+
+.btn-back{
+    display: flex;    
+    justify-content: flex-start;
+    position: relative;
+    right: 20px; 
+    margin: 10px; 
+}

@@ -6,6 +6,11 @@
   </div>
 </nav>
 
+<div class="btnAdd">
+  <a class="btn btn-outline-danger" href="<%= work_orders_path %>" role="button">Voltar</a>
+</div>
+<br>
+
 <% if(@work_order.errors.any?) %>
   <div class="alertField">
     <div class = "alert alert-warning">
@@ -78,8 +83,7 @@
         <%= f.label :distance %> (km)
         <%= f.text_field :distance, { class: "form-control", placeholder: "Distância" } %>
         </div>
-        
-        
+              
 
         <br>
         <div class="btn-form-modality">        
@@ -90,5 +94,5 @@
 <% end %>
 
 
-<%= @weights%>
+
  

@@ -6,6 +6,16 @@
   </div>
 </nav>
 
+<div class="btnAdd">
+<% if user_adm_signed_in? || user_regular_signed_in? %> 
+  <a class="btn btn-outline-danger" href="<%= work_orders_path %>" role="button">Voltar</a>
+<% else %>
+ <a class="btn btn-outline-danger" href="<%= root_path %>" role="button">Voltar</a>
+
+<% end %>
+</div>
+<br>
+
 <div class="form-group">
 <%= form_with(url: search_work_orders_path, method: :get) do |f| %>
         <div class="container-search">

@@ -1,3 +1,8 @@
+<div class="btnAdd">
+  <a class="btn btn-outline-danger" href="<%= modalities_path %>" role="button">Voltar</a>
+</div>
+<br>
+
 <% if(@modality.errors.any?) %>
   <div class="alertField">
     <div class = "alert alert-warning">
@@ -8,7 +13,6 @@
     </div>
   </div>
 <% end %>
-
 
 
 <%= form_with(model: @modality) do |f| %>

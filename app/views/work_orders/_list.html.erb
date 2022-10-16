@@ -1,0 +1,32 @@
+<div class="table-container-order">
+<table class="table table-hover table-bordered" >
+<thead>
+  <tr class="table-title-bg">
+    <th class="col-1">Código</th>
+    <th class="col-1">Status</th>    
+    <th class="col-1">Iniciar ordem e ver detalhes do pedido</th>            
+  </tr>
+</thead>
+<tbody>
+   <% @work_orders.each do |w| %>    
+    
+    <tr>
+      <td><%= w.delivery_code %></td>
+      <td>
+      <% if w.work_order_status == "pending" %>
+        <span class="badge badge-secondary"><%= WorkOrder.human_attribute_name(:pending) %></span>
+      <% elsif w.work_order_status == "progress"%>        
+        <span class="badge badge-dark"><%= WorkOrder.human_attribute_name(:progress) %></span>        
+      <% elsif w.work_order_status == "closed_in"%>        
+        <span class="badge badge-primary"><%= WorkOrder.human_attribute_name(:closed_in) %></span>
+      <% elsif w.work_order_status == "closed_out"%>        
+        <span class="badge badge-warning"><%= WorkOrder.human_attribute_name(:closed_out) %></span>
+        
+      <% end %>
+      </td>
+      <td><a class="btn btn-outline-primary" href="<%=  work_order_path(w.id) %>" role="button">Mais detalhes...</a></td>
+     
+    </tr>
+ <% end %>
+</tbody>
+</div>
