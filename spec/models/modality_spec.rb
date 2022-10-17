@@ -46,7 +46,7 @@ RSpec.describe Modality, type: :model do
         second_modality = Modality.new(name: 'Ship from store', minimum_distance: 10, maximum_distance:100, minimum_weight:10, maximum_weight:200, flat_rate:'15')
        
         expect(second_modality.valid?).to eq false
-      end    
+      end 
     end
   end
 end

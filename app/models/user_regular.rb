@@ -6,4 +6,8 @@ class UserRegular < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   validates :email, format: {with: /\A^[A-Za-z0-9._%+-]+@sistemadefrete\.com\.br$\z/, message: "deve possuir domain: @sistemadefrete.com.br" }
+
+  def description_regular
+    "#{email}"
+  end
 end
