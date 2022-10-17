@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-10-17T12:06:25-03:00">2022-10-17T12:06:25-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-10-17T12:35:15-03:00">2022-10-17T12:35:15-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>1599</b> relevant lines,
-    <span class="green"><b>1574</b> lines covered</span> and
+    <b>1600</b> relevant lines,
+    <span class="green"><b>1575</b> lines covered</span> and
     <span class="red"><b>25</b> lines missed. </span>
     (<span class="green">
   98.44%
@@ -138,12 +138,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#7c0b9fde197af59ff885cee3bef1eb23eb98cf18" class="src_link" title="app/controllers/open_work_orders_controller.rb">app/controllers/open_work_orders_controller.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">95.00 %</td>
-            <td class="cell--number">101</td>
-            <td class="cell--number">60</td>
-            <td class="cell--number">57</td>
+            <td class="green strong cell--number t-file__coverage">95.08 %</td>
+            <td class="cell--number">102</td>
+            <td class="cell--number">61</td>
+            <td class="cell--number">58</td>
             <td class="cell--number">3</td>
-            <td class="cell--number">1.57</td>
+            <td class="cell--number">1.56</td>
             
           </tr>
         
@@ -2775,7 +2775,7 @@
     <h3>app/controllers/open_work_orders_controller.rb</h3>
     <h4>
       <span class="green">
-  95.0%
+  95.08%
 </span>
 
       lines covered
@@ -2784,8 +2784,8 @@
     
 
     <div class="t-line-summary">
-      <b>60</b> relevant lines.
-      <span class="green"><b>57</b> lines covered</span> and
+      <b>61</b> relevant lines.
+      <span class="green"><b>58</b> lines covered</span> and
       <span class="red"><b>3</b> lines missed.</span>
     </div>
 
@@ -2847,7 +2847,7 @@
 
             
 
-            <code class="ruby">        data_processing()</code>
+            <code class="ruby">        data_processing</code>
           </li>
         </div>
       
@@ -2946,7 +2946,7 @@
 
             
 
-            <code class="ruby">        data_processing()</code>
+            <code class="ruby">        data_processing</code>
           </li>
         </div>
       
@@ -3254,18 +3254,18 @@
 
             
 
-            <code class="ruby">    def data_processing()</code>
+            <code class="ruby">    private</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="43">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="43">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        @work_order = WorkOrder.find(params[:work_order_id])        </code>
+            <code class="ruby">    def data_processing</code>
           </li>
         </div>
       
@@ -3276,29 +3276,29 @@
 
             
 
+            <code class="ruby">        @work_order = WorkOrder.find(params[:work_order_id])        </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="45">
+            <span class="hits">2</span>
+            
+
+            
+
             <code class="ruby">        @open_work_order = OpenWorkOrder.new()</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="45">
+          <li class="never" data-hits="" data-linenumber="46">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="46">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">        @modalities = Modality.all</code>
           </li>
         </div>
       
@@ -3309,7 +3309,7 @@
 
             
 
-            <code class="ruby">        @deadlines = Deadline.all</code>
+            <code class="ruby">        @modalities = Modality.all</code>
           </li>
         </div>
       
@@ -3320,7 +3320,7 @@
 
             
 
-            <code class="ruby">        @weight_prices = WeightPrice.all</code>
+            <code class="ruby">        @deadlines = Deadline.all</code>
           </li>
         </div>
       
@@ -3331,12 +3331,23 @@
 
             
 
+            <code class="ruby">        @weight_prices = WeightPrice.all</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="50">
+            <span class="hits">2</span>
+            
+
+            
+
             <code class="ruby">        @distance_prices = DistancePrice.all</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="50">
+          <li class="never" data-hits="" data-linenumber="51">
             
             
 
@@ -3347,7 +3358,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="51">
+          <li class="covered" data-hits="2" data-linenumber="52">
             <span class="hits">2</span>
             
 
@@ -3358,7 +3369,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="52">
+          <li class="never" data-hits="" data-linenumber="53">
             
             
 
@@ -3369,7 +3380,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="53">
+          <li class="covered" data-hits="2" data-linenumber="54">
             <span class="hits">2</span>
             
 
@@ -3380,7 +3391,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="54">
+          <li class="never" data-hits="" data-linenumber="55">
             
             
 
@@ -3391,7 +3402,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="55">
+          <li class="covered" data-hits="2" data-linenumber="56">
             <span class="hits">2</span>
             
 
@@ -3402,7 +3413,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="56">
+          <li class="never" data-hits="" data-linenumber="57">
             
             
 
@@ -3413,7 +3424,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="57">
+          <li class="covered" data-hits="2" data-linenumber="58">
             <span class="hits">2</span>
             
 
@@ -3424,7 +3435,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="58">
+          <li class="covered" data-hits="2" data-linenumber="59">
             <span class="hits">2</span>
             
 
@@ -3435,7 +3446,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="59">
+          <li class="covered" data-hits="2" data-linenumber="60">
             <span class="hits">2</span>
             
 
@@ -3446,7 +3457,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="60">
+          <li class="never" data-hits="" data-linenumber="61">
             
             
 
@@ -3457,7 +3468,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="61">
+          <li class="never" data-hits="" data-linenumber="62">
             
             
 
@@ -3468,7 +3479,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="62">
+          <li class="covered" data-hits="2" data-linenumber="63">
             <span class="hits">2</span>
             
 
@@ -3479,7 +3490,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="63">
+          <li class="covered" data-hits="2" data-linenumber="64">
             <span class="hits">2</span>
             
 
@@ -3490,7 +3501,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="64">
+          <li class="covered" data-hits="2" data-linenumber="65">
             <span class="hits">2</span>
             
 
@@ -3501,7 +3512,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="65">
+          <li class="never" data-hits="" data-linenumber="66">
             
             
 
@@ -3512,24 +3523,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="66">
+          <li class="never" data-hits="" data-linenumber="67">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="67">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">        @time_deadline = []</code>
           </li>
         </div>
       
@@ -3540,7 +3540,7 @@
 
             
 
-            <code class="ruby">        @deadline_value.each do |d|</code>
+            <code class="ruby">        @time_deadline = []</code>
           </li>
         </div>
       
@@ -3551,18 +3551,18 @@
 
             
 
-            <code class="ruby">            @time_deadline &lt;&lt; d.duration</code>
+            <code class="ruby">        @deadline_value.each do |d|</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="70">
-            
-            
-
+          <li class="covered" data-hits="2" data-linenumber="70">
+            <span class="hits">2</span>
             
 
-            <code class="ruby">        end</code>
+            
+
+            <code class="ruby">            @time_deadline &lt;&lt; d.duration</code>
           </li>
         </div>
       
@@ -3573,18 +3573,18 @@
 
             
 
-            <code class="ruby">        </code>
+            <code class="ruby">        end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="72">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="72">
+            
             
 
             
 
-            <code class="ruby">        @id_modality = []</code>
+            <code class="ruby">        </code>
           </li>
         </div>
       
@@ -3595,7 +3595,7 @@
 
             
 
-            <code class="ruby">        @weight_value.each do |id|</code>
+            <code class="ruby">        @id_modality = []</code>
           </li>
         </div>
       
@@ -3606,18 +3606,18 @@
 
             
 
-            <code class="ruby">            @id_modality &lt;&lt; id.modality_id</code>
+            <code class="ruby">        @weight_value.each do |id|</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="75">
-            
-            
-
+          <li class="covered" data-hits="2" data-linenumber="75">
+            <span class="hits">2</span>
             
 
-            <code class="ruby">        end</code>
+            
+
+            <code class="ruby">            @id_modality &lt;&lt; id.modality_id</code>
           </li>
         </div>
       
@@ -3628,18 +3628,18 @@
 
             
 
-            <code class="ruby">        </code>
+            <code class="ruby">        end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="77">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="77">
+            
             
 
             
 
-            <code class="ruby">        j=0</code>
+            <code class="ruby">        </code>
           </li>
         </div>
       
@@ -3650,7 +3650,7 @@
 
             
 
-            <code class="ruby">        @tax_modality = []</code>
+            <code class="ruby">        j=0</code>
           </li>
         </div>
       
@@ -3661,7 +3661,7 @@
 
             
 
-            <code class="ruby">        @name_modality = []</code>
+            <code class="ruby">        @tax_modality = []</code>
           </li>
         </div>
       
@@ -3672,7 +3672,7 @@
 
             
 
-            <code class="ruby">        @modality_n_id = []</code>
+            <code class="ruby">        @name_modality = []</code>
           </li>
         </div>
       
@@ -3683,7 +3683,7 @@
 
             
 
-            <code class="ruby">        @modality_group = []</code>
+            <code class="ruby">        @modality_n_id = []</code>
           </li>
         </div>
       
@@ -3694,7 +3694,7 @@
 
             
 
-            <code class="ruby">        while j &lt; @id_modality.length do</code>
+            <code class="ruby">        @modality_group = []</code>
           </li>
         </div>
       
@@ -3705,7 +3705,7 @@
 
             
 
-            <code class="ruby">            @tax_modality &lt;&lt; Modality.find(@id_modality[j]).flat_rate</code>
+            <code class="ruby">        while j &lt; @id_modality.length do</code>
           </li>
         </div>
       
@@ -3716,7 +3716,7 @@
 
             
 
-            <code class="ruby">            @name_modality &lt;&lt; Modality.find(@id_modality[j]).name</code>
+            <code class="ruby">            @tax_modality &lt;&lt; Modality.find(@id_modality[j]).flat_rate</code>
           </li>
         </div>
       
@@ -3727,7 +3727,7 @@
 
             
 
-            <code class="ruby">            @modality_n_id &lt;&lt; Modality.find(@id_modality[j]).id</code>
+            <code class="ruby">            @name_modality &lt;&lt; Modality.find(@id_modality[j]).name</code>
           </li>
         </div>
       
@@ -3738,7 +3738,7 @@
 
             
 
-            <code class="ruby">            @modality_group &lt;&lt; Modality.find(@id_modality[j])</code>
+            <code class="ruby">            @modality_n_id &lt;&lt; Modality.find(@id_modality[j]).id</code>
           </li>
         </div>
       
@@ -3749,18 +3749,18 @@
 
             
 
-            <code class="ruby">            j+=1</code>
+            <code class="ruby">            @modality_group &lt;&lt; Modality.find(@id_modality[j])</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="88">
-            
-            
-
+          <li class="covered" data-hits="2" data-linenumber="88">
+            <span class="hits">2</span>
             
 
-            <code class="ruby">        end</code>
+            
+
+            <code class="ruby">            j+=1</code>
           </li>
         </div>
       
@@ -3771,18 +3771,18 @@
 
             
 
-            <code class="ruby">        </code>
+            <code class="ruby">        end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="90">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="90">
+            
             
 
             
 
-            <code class="ruby">        i=0</code>
+            <code class="ruby">        </code>
           </li>
         </div>
       
@@ -3793,7 +3793,7 @@
 
             
 
-            <code class="ruby">        @total_price_values=[]</code>
+            <code class="ruby">        i=0</code>
           </li>
         </div>
       
@@ -3804,7 +3804,7 @@
 
             
 
-            <code class="ruby">        while i &lt; @tax_weight.length do</code>
+            <code class="ruby">        @total_price_values=[]</code>
           </li>
         </div>
       
@@ -3815,7 +3815,7 @@
 
             
 
-            <code class="ruby">            @total_price_values[i] = (@work_order.distance * @tax_weight[i]) + @tax_distance[i]  + @tax_modality[i]</code>
+            <code class="ruby">        while i &lt; @tax_weight.length do</code>
           </li>
         </div>
       
@@ -3826,18 +3826,18 @@
 
             
 
-            <code class="ruby">            i+=1</code>
+            <code class="ruby">            @total_price_values[i] = (@work_order.distance * @tax_weight[i]) + @tax_distance[i]  + @tax_modality[i]</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="95">
-            
-            
-
+          <li class="covered" data-hits="2" data-linenumber="95">
+            <span class="hits">2</span>
             
 
-            <code class="ruby">        end</code>
+            
+
+            <code class="ruby">            i+=1</code>
           </li>
         </div>
       
@@ -3848,7 +3848,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">        end</code>
           </li>
         </div>
       
@@ -3859,7 +3859,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3870,7 +3870,7 @@
 
             
 
-            <code class="ruby">    </code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -3881,7 +3881,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    </code>
           </li>
         </div>
       
@@ -3898,6 +3898,17 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="101">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="102">
             
             
 

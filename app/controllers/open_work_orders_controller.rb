@@ -2,7 +2,7 @@ class OpenWorkOrdersController < ApplicationController
     before_action :authenticate_any!
     def new        
        
-        data_processing()
+        data_processing
 
         @name_column = ['Modalidade', 'Prazo (dias)', 'Preço (R$)' ]
         @rows_val = [@name_modality, @time_deadline, @total_price_values ]
@@ -11,7 +11,7 @@ class OpenWorkOrdersController < ApplicationController
 
 
     def create
-        data_processing()
+        data_processing
 
         @work_order = WorkOrder.find(params[:work_order_id])        
         open_work_order_params = params.require(:open_work_order).permit(:modality_id,  :total_price, :deadline_date)
@@ -39,7 +39,8 @@ class OpenWorkOrdersController < ApplicationController
        
     end
     
-    def data_processing()
+    private
+    def data_processing
         @work_order = WorkOrder.find(params[:work_order_id])        
         @open_work_order = OpenWorkOrder.new()
 
