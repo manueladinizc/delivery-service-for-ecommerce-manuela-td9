@@ -41,7 +41,7 @@ A evolução e backlog do projeto pode ser acompanhado pelas ferramentas abaixo:
 * Em desenvolvimento:
     - Cadastro de preços praticados para novas modalidades de transporte
     - Edição de preços praticados por modalidade de transporte
-    - Vinculação automatica de um veículo disponível para realizar a entrega e disponibilização do mesmo quando a entrega for concluída.
+    - Vinculação automática de um veículo disponível para realizar a entrega e disponibilização do mesmo quando a entrega for concluída.
 
  
 
