@@ -23,7 +23,8 @@ A evolução e backlog do projeto pode ser acompanhado pelas ferramentas abaixo:
 * Disponíveis:  
     - Cadastrar, editar e visualizar modalidades
     - Usuários administradores e regulares têm papéis diferentes
-    - Cadastrar e editar dados veículos, enviar um veículo para manutenção e buscar um veículo a partir de sua placa para consultar sua situação atual
+    - Cadastrar e editar dados veículos, enviar um veículo para manutenção
+    - Buscar um veículo a partir de sua placa para consultar sua situação atual
     - Tabelas de peso, distância e prazo com intervalos e taxas para as modalidades já cadastradas
     - Usuários podem consultar todos os preços cadastrados
     - Usuário administrador pode cadastrar uma nova ordem de serviço
@@ -38,8 +39,9 @@ A evolução e backlog do projeto pode ser acompanhado pelas ferramentas abaixo:
     - Para consultar dados da entrega deve ser informado o código único da ordem de serviço completo
     - Exibir motivo do atraso em caso de encerramento com atraso
 * Em desenvolvimento:
-    - Cadastro de preços praticados para cada modalidade de transporte
-    - Sistema deve alocar automaticamente um veículo disponível para realizar a entrega e disponibilizar o mesmo quando a entrega for concluída.
+    - Cadastro de preços praticados para novas modalidades de transporte
+    - Edição de preços praticados por modalidade de transporte
+    - Vinculação automatica de um veículo disponível para realizar a entrega e disponibilização do mesmo quando a entrega for concluída.
 
  
 
@@ -80,3 +82,6 @@ A evolução e backlog do projeto pode ser acompanhado pelas ferramentas abaixo:
      - Através do peso e distância fornecida na ordem de serviço
      
      `Preço total = (valor por km * distância) + taxa da distância + taxa fixa`
+
+* Essa versão atende a cargas com pesos até 1000kg e percorre distâncias até 800km.
+
