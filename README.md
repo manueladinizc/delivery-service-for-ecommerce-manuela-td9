@@ -85,3 +85,5 @@ A evolução e backlog do projeto pode ser acompanhado pelas ferramentas abaixo:
 
 * Essa versão atende a cargas com pesos até 1000kg e percorre distâncias até 800km.
 
+* Essa versão pode apresentar um erro que ocorre caso a ordens de serviço não seja iniciadas na ordem da sua criação (seu id). Não exibindo a tela de detalhes referente a entrega. O bug está em análise para correção.
+
