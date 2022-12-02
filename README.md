@@ -109,5 +109,3 @@ $ rails s
 * Essa versão pode apresentar um erro que ocorre caso a ordens de serviço não seja iniciadas na ordem da sua criação (seu id). Não exibindo a tela de detalhes referente a entrega. O bug está em análise para correção.
 
 * O método data_processing em open_work_order.controller.rb, precisa ser refatorado. Está em estudo, pois a mudança está impactando em outras funcionalidades.
-
-code
