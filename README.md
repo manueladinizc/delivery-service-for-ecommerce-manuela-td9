@@ -47,25 +47,46 @@ A evolução e backlog do projeto pode ser acompanhado pelas ferramentas abaixo:
 
 ## Acesso as funcionalidades da plataforma
 
-* Baixe e acesso o repositório através dos comandos comandos:
+* A versão utilizada: `ruby 3.1.2`
 
-`git clone https://github.com/manueladinizc/delivery-service-for-ecommerce-manuela-td9.git`
+<p align = "justify"> No terminal, clone o projeto: </p>
 
-`cd delivery-service-for-ecommerce-manuela-td9`
+```
+$ git clone https://github.com/manueladinizc/delivery-service-for-ecommerce-manuela-td9.git
+```
 
-* A versão utilizada para esse projeto foi `ruby 3.1.0`. Em caso de diferença de versões, instale a versão referente ao projeto. 
+<p align = "justify"> Entre na pasta do projeto: </p>
 
-* Execute as 'migration':
+```
+$ cd delivery-service-for-ecommerce-manuela-td9
+```
 
-`rails db:migration`
+<p align = "justify"> Instale as dependencias: </p>
 
-* Popular o db:
+```
+$ bundle
+```
 
-`rails db:seed`
+<p align = "justify"> Popule a aplicação: </p>
 
-* Inicie o servidor:
+```
+$ rails db:migrate
+$ rails db:seed
+```
 
-`rails s`
+<p align = "justify"> Visualize os testes: </p>
+
+```
+$ rspec
+```
+
+<p align = "justify"> Visualize no navegador: </p>
+
+```
+$ rails s
+```
+
+* Acesse seu localhost
 
 * Para acessar como usuário administrador:
     - login: manuela@sistemadefrete.com.br
@@ -89,3 +110,4 @@ A evolução e backlog do projeto pode ser acompanhado pelas ferramentas abaixo:
 
 * O método data_processing em open_work_order.controller.rb, precisa ser refatorado. Está em estudo, pois a mudança está impactando em outras funcionalidades.
 
+code

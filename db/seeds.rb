@@ -111,19 +111,3 @@ OpenWorkOrder.create!(modality_id: 1, work_order_id: 2, total_price: 1978, deadl
 CloseWorkOrder.create!(work_order_id: 2, delivery_date: (Time.now - 2.day), description: "Houve atraso no transporte deviso a protesto nas estradas")
 
 WorkOrder.create!(pickup_address: "Rua das Fronteiras, 18", pickup_city: 'Recife', pickup_state: "PE", product_code: "18845ABD", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 1000", customer_name: "Carolina", delivery_city: "Recife", delivery_state: 'PE', distance:10)
-
-WorkOrder.create!(pickup_address: "Rua da lua, 87", pickup_city: 'Recife', pickup_state: "PE", product_code: "52785ABD", height:50, width:50, depth:60, weight:150, delivery_address: "Av. Boa viagem, 1000", customer_name: "Caio", delivery_city: "Recife", delivery_state: 'PE', distance:406)
-
-WorkOrder.create!(pickup_address: "Rua torta, 587", pickup_city: 'Recife', pickup_state: "PE", product_code: "82845ABD", height:50, width:50, depth:60, weight:950, delivery_address: "Av. Boa viagem, 1000", customer_name: "Camila", delivery_city: "Recife", delivery_state: 'PE', distance:350)
-
-WorkOrder.create!(pickup_address: "Rua da Mariana Batista, 789", pickup_city: 'Recife', pickup_state: "PE", product_code: "284458BD", height:50, width:50, depth:60, weight:369, delivery_address: "Av. Boa viagem, 800", customer_name: "Marcos", delivery_city: "Recife", delivery_state: 'PE', distance:250)
-
-WorkOrder.create!(pickup_address: "Rua da Menina, 7874", pickup_city: 'Recife', pickup_state: "PE", product_code: "5284SJBD", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 800", customer_name: "Marcos", delivery_city: "Recife", delivery_state: 'PE', distance:57)
-
-WorkOrder.create!(pickup_address: "Rua da Menina, 7874", pickup_city: 'Recife', pickup_state: "PE", product_code: "5284SSSS", height:50, width:50, depth:60, weight:180, delivery_address: "Av. Boa viagem, 800", customer_name: "Marcos", delivery_city: "Recife", delivery_state: 'PE', distance:30)
-
-WorkOrder.create!(pickup_address: "Rua da Menina, 7874", pickup_city: 'Recife', pickup_state: "PE", product_code: "5284SKKK", height:50, width:50, depth:60, weight:240, delivery_address: "Av. Boa viagem, 800", customer_name: "Marcos", delivery_city: "Recife", delivery_state: 'PE', distance:200)
-
-WorkOrder.create!(pickup_address: "Rua da Menina, 7874", pickup_city: 'Recife', pickup_state: "PE", product_code: "5284SHHH", height:50, width:50, depth:60, weight:100, delivery_address: "Av. Boa viagem, 800", customer_name: "Marcos", delivery_city: "Recife", delivery_state: 'PE', distance:183)
-
-
