@@ -24,6 +24,7 @@ describe 'Usuário visita página de tabela de preços por peso' do
         expect(page).to have_content('Tabela de configuração de preço por peso')
         expect(page).to have_content('Intervalo (Kg)')
         expect(page).to have_content('Valor por km (R$)')
+        expect(page).to have_content('Alterar Dados')
         expect(page).to have_content('101')
         expect(page).to have_content('30')
 

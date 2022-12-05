@@ -1,0 +1,9 @@
+pt-BR:        
+  activerecord:
+    models:
+     weight_price:
+    attributes:
+      weight_price:
+        initial_weight: "Peso inicial do intervalo (Kg)"
+        final_weight: "Peso final do intervalo (Kg)"
+        weight_rate: "Valor por km (R$)"

@@ -33,6 +33,7 @@
   <tr class="table-title-bg">
     <th colspan="2" class="col-2">Intervalo (Kg)</th>
     <th class="col-1">Valor por km (R$)</th>    
+    <th class="col-1">Alterar Dados</th>    
   </tr>
 </thead>
 <tbody>
@@ -42,6 +43,7 @@
       <td><%= w.final_weight %></td>
       <td><%= w.weight_rate %></td>
      
+      <td><a class="btn btn-outline-primary" href="<%= edit_modality_weight_price_path(@weight_price, w.id) %>" role="button">Editar</a></td>
     </tr>
  <% end %>
 </tbody>

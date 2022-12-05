@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
   resources :modalities, only: [:show, :index, :new, :create, :edit, :update] do
-    resources :weight_prices, only: [:index]
-    resources :distance_prices, only: [:index]
-    resources :deadlines, only: [:index]
+    resources :weight_prices, only: [:index, :edit, :update]
+    resources :distance_prices, only: [:index, :edit, :update]
+    resources :deadlines, only: [:index, :edit, :update]
   end
 
   resources :work_orders, only: [:index, :show, :new, :create] do
