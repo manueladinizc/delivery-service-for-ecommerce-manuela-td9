@@ -6,13 +6,11 @@
   </div>
 </nav>
 
-
-<% if @weight_prices.empty? %>
-
-<div class="btnAdd">
-  <a class="btn btn-outline-danger" href="<%= modalities_path %>" role="button">Voltar</a>
-</div>
-<br>
+<% if @weight_prices.nil? %>
+  <div class="btnAdd">
+    <a class="btn btn-outline-danger" href="<%= modalities_path %>" role="button">Voltar</a>
+  </div>
+  <br>
 
   <div class="alertField">
     <div class="alert alert-warning" role="alert">
@@ -20,32 +18,42 @@
     </div>
   </div>
 <% else %>
-
-<div class="btnAdd">
-  <a class="btn btn-outline-danger" href="<%= modality_path(@weight_price) %>" role="button">Voltar</a>
-</div>
-<br>
-
-
-<div class="table-container">
-<table class="table table-hover table-bordered">
-<thead>
-  <tr class="table-title-bg">
-    <th colspan="2" class="col-2">Intervalo (Kg)</th>
-    <th class="col-1">Valor por km (R$)</th>    
-    <th class="col-1">Alterar Dados</th>    
-  </tr>
-</thead>
-<tbody>
-   <% @weight_prices.each do |w| %>
-    <tr>
-      <td><%= w.initial_weight %></td>
-      <td><%= w.final_weight %></td>
-      <td><%= w.weight_rate %></td>
-     
-      <td><a class="btn btn-outline-primary" href="<%= edit_modality_weight_price_path(@weight_price, w.id) %>" role="button">Editar</a></td>
-    </tr>
- <% end %>
-</tbody>
-</div>
+  <div class="btnAdd">
+    <a class="btn btn-outline-danger" href="<%= modality_path(@weight_price) %>" role="button">Voltar</a>
+  </div>
+  <br>
+  <div class="table-container">
+    <table class="table table-hover table-bordered">
+    <thead>
+      <tr class="table-title-bg">
+        <th colspan="2" class="col-2">Intervalo (Kg)</th>
+        <th class="col-1">Valor por km (R$)</th>    
+        <th class="col-1">Alterar Dados</th>    
+      </tr>
+    </thead>
+    <tbody>
+      <% @weight_prices.each do |w| %>
+        <tr>
+          <td><%= w.initial_weight %></td>
+          <td><%= w.final_weight %></td>
+          <td><%= w.weight_rate %></td>        
+          <td><a class="btn btn-outline-primary" href="<%= edit_modality_weight_price_path(@weight_price, w.id) %>" role="button">Editar</a></td>
+        </tr>
+    <% end %>
+    </tbody>
+    </table>
+  </div>
 <%end%>
+<br>
+<nav class="navbar bg-white">
+  <div class="container-fluid">
+    <a class="navbar-brand" >
+      Cadastrar novo internavo
+    </a>
+  </div>
+</nav>
+
+<%= render 'form' %>
+
+
+

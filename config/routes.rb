@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
   resources :modalities, only: [:show, :index, :new, :create, :edit, :update] do
-    resources :weight_prices, only: [:index, :edit, :update]
+    resources :weight_prices, only: [:index, :edit, :update, :create]
     resources :distance_prices, only: [:index, :edit, :update]
     resources :deadlines, only: [:index, :edit, :update]
   end

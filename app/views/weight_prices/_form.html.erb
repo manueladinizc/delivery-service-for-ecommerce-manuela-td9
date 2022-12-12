@@ -1,21 +1,15 @@
-<div class="btnAdd">
-  <a class="btn btn-outline-danger" href="<%= modality_weight_prices_path(@modality) %>" role="button">Voltar</a>
-</div>
-<br>
-
-<% if(@weight_price.errors.any?) %>
+<% if(@weight_price_id.errors.any?) %>
   <div class="alertField">
     <div class = "alert alert-warning">
     <p>Verifique os erros abaixo:</p>
-    <% @weight_price.errors.full_messages.each do |msg| %>
+    <% @weight_price_id.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
     <% end %>
     </div>
   </div>
 <% end %>
 
-
-<%= form_for [@modality, @weight_price ] do |f| %>
+<%= form_for [@modality, @weight_price_id ] do |f| %>
 
    <div class="container-form-modality">
         <div class="form-group col-md-6">
@@ -31,7 +25,7 @@
         <%= f.number_field :weight_rate, { class: "form-control", placeholder: "Valor por Km (R$)" } %>
         </div>
         
-        <div class="btn-form-modality">        
+        <div class="btn-form-modality">
         <%= f.submit 'Gravar', class: "btn btn-primary" %>
         </div>
     </div>
