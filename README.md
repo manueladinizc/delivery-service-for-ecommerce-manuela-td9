@@ -104,8 +104,6 @@ $ rails s
      
      `Preço total = (valor por km * distância) + taxa da distância + taxa fixa`
 
-* Essa versão atende a cargas com pesos até 1000kg e percorre distâncias até 800km.
-
-* Essa versão pode apresentar um erro que ocorre caso a ordens de serviço não seja iniciadas na ordem da sua criação (seu id). Não exibindo a tela de detalhes referente a entrega. O bug está em análise para correção.
+* Essa versão atende distâncias até 800km.
 
 * O método data_processing em open_work_order.controller.rb, precisa ser refatorado. Está em estudo, pois a mudança está impactando em outras funcionalidades.
