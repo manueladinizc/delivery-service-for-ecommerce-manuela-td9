@@ -5,7 +5,7 @@ describe 'Usuário visita página de tabela de preços por peso' do
         #Arrange
         user = UserRegular.create!(name: 'Manu', email: 'manu@sistemadefrete.com.br', password: 'password')
 
-        modality_1 = Modality.create!(name: 'Ship from store', minimum_distance: 11, maximum_distance:50, minimum_weight:10, maximum_weight:100, flat_rate:15)
+        modality_1 = Modality.create!(name: 'Ship from store', minimum_distance: 11, maximum_distance:50, minimum_weight:0, maximum_weight:1000, flat_rate:15)
 
         WeightPrice.create!(initial_weight:0, final_weight:10, weight_rate:1, modality: modality_1 )
         WeightPrice.create!(initial_weight:11, final_weight:30, weight_rate:2, modality: modality_1 )

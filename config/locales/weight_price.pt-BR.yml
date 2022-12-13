@@ -7,3 +7,4 @@ pt-BR:
         initial_weight: "Peso inicial do intervalo (Kg)"
         final_weight: "Peso final do intervalo (Kg)"
         weight_rate: "Valor por km (R$)"
+        

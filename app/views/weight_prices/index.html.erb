@@ -6,7 +6,7 @@
   </div>
 </nav>
 
-<% if @weight_prices.nil? %>
+<% if @weight_prices.empty? %>
   <div class="btnAdd">
     <a class="btn btn-outline-danger" href="<%= modalities_path %>" role="button">Voltar</a>
   </div>
