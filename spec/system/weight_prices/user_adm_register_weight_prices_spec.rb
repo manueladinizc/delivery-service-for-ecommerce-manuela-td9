@@ -71,6 +71,7 @@ describe 'Usuário visita página de tabela de preços por peso' do
 
 
       #Assert
+      expect(page).to have_content('Configuração de preço por peso atualizado com sucesso')
       expect(page).to have_content('Tabela de configuração de preço por peso')
       expect(page).to have_content('Intervalo (Kg)')
       expect(page).to have_content('Valor por km (R$)')

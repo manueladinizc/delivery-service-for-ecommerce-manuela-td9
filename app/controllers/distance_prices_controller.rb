@@ -27,7 +27,7 @@ class DistancePricesController < ApplicationController
   def edit
     @modality = Modality.find(params[:modality_id])
     @distance_price_id = DistancePrice.find(params[:id])
-end
+ end
 
 def update
   @modality = Modality.find(params[:modality_id])
@@ -43,8 +43,8 @@ end
 
 private
 
-def distance_price_params
-    params.require(:distance_price).permit(:initial_distance, :final_distance, :distance_rate) 
-end
+    def distance_price_params
+        params.require(:distance_price).permit(:initial_distance, :final_distance, :distance_rate) 
+    end
 
 end
