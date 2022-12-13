@@ -104,6 +104,4 @@ $ rails s
      
      `Preço total = (valor por km * distância) + taxa da distância + taxa fixa`
 
-* Essa versão atende distâncias até 800km.
-
 * O método data_processing em open_work_order.controller.rb, precisa ser refatorado. Está em estudo, pois a mudança está impactando em outras funcionalidades.
