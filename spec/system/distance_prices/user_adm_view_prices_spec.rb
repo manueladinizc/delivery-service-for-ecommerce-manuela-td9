@@ -5,11 +5,11 @@ describe 'Usuário visita página de tabela de preços por distância' do
         #Arrange
         user = UserAdm.create!(name: 'Manuela', email: 'manuela@sistemadefrete.com.br', password: 'password')
 
-        modality_1 = Modality.create!(name: 'Ship from store', minimum_distance: 11, maximum_distance:50, minimum_weight:10, maximum_weight:100, flat_rate:15)
+        modality_1 = Modality.create!(name: 'Ship from store', minimum_distance: 0, maximum_distance:800, minimum_weight:10, maximum_weight:100, flat_rate:15)
 
         DistancePrice.create!(initial_distance:0, final_distance:50, distance_rate:9, modality: modality_1 )
         DistancePrice.create!(initial_distance:51, final_distance:150, distance_rate:12, modality: modality_1 )
-        DistancePrice.create!(initial_distance:150, final_distance:800, distance_rate:20, modality: modality_1 )
+        DistancePrice.create!(initial_distance:151, final_distance:800, distance_rate:20, modality: modality_1 )
         
         #Act
         visit root_path 
@@ -21,7 +21,7 @@ describe 'Usuário visita página de tabela de preços por distância' do
 
         #Assert
         expect(page).to have_content('Tabela de configuração de preço por distância')
-        expect(page).to have_content('Intervalo (km)')
+        expect(page).to have_content('Intervalo (Km)')
         expect(page).to have_content('Taxa (R$)')
         expect(page).to have_content('0')
         expect(page).to have_content('800')

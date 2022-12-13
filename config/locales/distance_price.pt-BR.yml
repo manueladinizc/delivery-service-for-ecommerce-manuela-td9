@@ -1,0 +1,10 @@
+pt-BR:        
+  activerecord:
+    models:
+     distance_price:
+    attributes:
+      distance_price:
+        initial_distance: "Distância inicial do intervalo (Km)"
+        final_distance: "Distância final do intervalo (Km)"
+        distance_rate: "Taxa (R$)"
+        

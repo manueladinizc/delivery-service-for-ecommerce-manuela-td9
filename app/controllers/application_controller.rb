@@ -17,16 +17,6 @@ def authenticate_any!
   end 
 end
 
-# def authenticate!
-#   if @current_user == user_admin 
-#       authenticate_user_admin!
-#   elsif @current_user == user_regular
-#       authenticate_user_regular!
-#   end
-# end
-
-
-
 protected
 
   def configure_permitted_parameters
