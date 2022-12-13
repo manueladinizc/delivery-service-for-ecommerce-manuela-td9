@@ -7,10 +7,10 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 #Modality
-modality_1 = Modality.create!(name: 'Envio Direto', minimum_distance: 11, maximum_distance:50, minimum_weight:0, maximum_weight:1000, flat_rate:15)
-modality_2 = Modality.create!(name: 'Envio Por Demanda', minimum_distance: 3, maximum_distance:10, minimum_weight:0, maximum_weight:1000, flat_rate:10, modality_status: 1)
-modality_3 = Modality.create!(name: 'Entrega Expressa', minimum_distance: 3, maximum_distance:25, minimum_weight:0, maximum_weight:1000, flat_rate:20)
-modality_4 = Modality.create!(name: 'Entrega Padrão', minimum_distance: 3, maximum_distance:25, minimum_weight:0, maximum_weight:1000, flat_rate:20, modality_status: 1)
+modality_1 = Modality.create!(name: 'Envio Direto', minimum_distance: 0, maximum_distance:2000, minimum_weight:0, maximum_weight:1000, flat_rate:15)
+modality_2 = Modality.create!(name: 'Envio Por Demanda', minimum_distance: 0, maximum_distance:2000, minimum_weight:0, maximum_weight:1000, flat_rate:10, modality_status: 1)
+modality_3 = Modality.create!(name: 'Entrega Expressa', minimum_distance: 0, maximum_distance:2000, minimum_weight:0, maximum_weight:1000, flat_rate:20)
+modality_4 = Modality.create!(name: 'Entrega Padrão', minimum_distance: 0, maximum_distance:2000, minimum_weight:0, maximum_weight:1000, flat_rate:20, modality_status: 1)
 
 
 #usuário Adm
@@ -64,19 +64,19 @@ WeightPrice.create!(initial_weight:101, final_weight:1000, weight_rate:16, modal
 #Modality_1
 DistancePrice.create!(initial_distance:0, final_distance:50, distance_rate:2, modality: modality_1 )
 DistancePrice.create!(initial_distance:51, final_distance:150, distance_rate:9, modality: modality_1 )
-DistancePrice.create!(initial_distance:150, final_distance:800, distance_rate:13, modality: modality_1 )
+DistancePrice.create!(initial_distance:151, final_distance:800, distance_rate:13, modality: modality_1 )
 #Modality_2
 DistancePrice.create!(initial_distance:0, final_distance:50, distance_rate:4, modality: modality_2 )
 DistancePrice.create!(initial_distance:51, final_distance:150, distance_rate:10, modality: modality_2 )
-DistancePrice.create!(initial_distance:150, final_distance:800, distance_rate:15, modality: modality_2 )
+DistancePrice.create!(initial_distance:151, final_distance:800, distance_rate:15, modality: modality_2 )
 #Modality_3
 DistancePrice.create!(initial_distance:0, final_distance:50, distance_rate:6, modality: modality_3 )
 DistancePrice.create!(initial_distance:51, final_distance:150, distance_rate:11, modality: modality_3 )
-DistancePrice.create!(initial_distance:150, final_distance:800, distance_rate:17, modality: modality_3 )
+DistancePrice.create!(initial_distance:151, final_distance:800, distance_rate:17, modality: modality_3 )
 #Modality_4
 DistancePrice.create!(initial_distance:0, final_distance:50, distance_rate:8, modality: modality_4 )
 DistancePrice.create!(initial_distance:51, final_distance:150, distance_rate:12, modality: modality_4 )
-DistancePrice.create!(initial_distance:150, final_distance:800, distance_rate:20, modality: modality_4 )
+DistancePrice.create!(initial_distance:151, final_distance:800, distance_rate:20, modality: modality_4 )
 
 #Deadline
 #Modality_1

@@ -6,7 +6,7 @@ describe 'Usuário inicia uma ordem de serviço pendente' do
        allow(SecureRandom).to receive(:alphanumeric).with(15).and_return('ABC123456789456123')
        WorkOrder.create!(pickup_address: "Rua da Saudade, 10", pickup_city: 'Recife', pickup_state: "PE", product_code: "12345ADC", height:50, width:50, depth:60, weight:80, delivery_address: "Av. Boa viagem, 252", customer_name: "João", delivery_city: "Recife", delivery_state: 'PE', distance:100)     
        
-       modality_1 = Modality.create!(name: 'Ship from store', minimum_distance: 11, maximum_distance:50, minimum_weight:0, maximum_weight:1000, flat_rate:15)
+       modality_1 = Modality.create!(name: 'Ship from store', minimum_distance: 0, maximum_distance:2000, minimum_weight:0, maximum_weight:1000, flat_rate:15)
   
        Vehicle.create!(registration_plate: 123456, brand: "Mercedes-Benz", car_model: "Sprinter", model_year: 2017, weight_capacity:300, car_status:0, modality: modality_1)
        Vehicle.create!(registration_plate: 987456, brand: "Kia", car_model: "Bongo", model_year: 2019, weight_capacity:800, car_status:0, modality: modality_1)
@@ -19,7 +19,7 @@ describe 'Usuário inicia uma ordem de serviço pendente' do
   
        DistancePrice.create!(initial_distance:0, final_distance:50, distance_rate:2, modality: modality_1 )
        DistancePrice.create!(initial_distance:51, final_distance:150, distance_rate:9, modality: modality_1 )
-       DistancePrice.create!(initial_distance:150, final_distance:800, distance_rate:13, modality: modality_1 )
+       DistancePrice.create!(initial_distance:151, final_distance:800, distance_rate:13, modality: modality_1 )
   
        Deadline.create!(initial_interval:0, final_interval:50, duration:1, modality: modality_1 )
        Deadline.create!(initial_interval:51, final_interval:150, duration:5, modality: modality_1 )

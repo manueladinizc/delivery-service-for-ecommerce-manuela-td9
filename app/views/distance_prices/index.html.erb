@@ -29,8 +29,11 @@
 <table class="table table-hover table-bordered">
 <thead>
   <tr class="table-title-bg">
-    <th colspan="2" class="col-2">Intervalo (km)</th>
-    <th class="col-1">Taxa (R$)</th>    
+    <th colspan="2" class="col-2">Intervalo (Km)</th>
+    <th class="col-1">Taxa (R$)</th>
+    <% if user_adm_signed_in? %>
+      <th class="col-1">Alterar Dados</th>
+    <% end %>
   </tr>
 </thead>
 <tbody>
@@ -39,9 +42,25 @@
       <td><%= d.initial_distance %></td>
       <td><%= d.final_distance %></td>
       <td><%= d.distance_rate %></td>
-     
+      <% if user_adm_signed_in? %>
+        <td><a class="btn btn-outline-primary" href="<%= edit_modality_distance_price_path(@distance_price, d.id) %>" role="button">Editar</a></td>
+      <% end %>
     </tr>
  <% end %>
 </tbody>
+</table>
 </div>
 <%end%>
+<% if user_adm_signed_in? %>
+<br>
+<nav class="navbar bg-white">
+  <div class="container-fluid">
+    <a class="navbar-brand" >
+      Cadastrar novo internavo
+    </a>
+  </div>
+</nav>
+
+<%= render 'form' %>
+
+<% end %>
