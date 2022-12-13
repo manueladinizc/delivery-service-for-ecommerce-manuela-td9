@@ -39,8 +39,6 @@ A evolução e backlog do projeto pode ser acompanhado pelas ferramentas abaixo:
     - Para consultar dados da entrega deve ser informado o código único da ordem de serviço completo
     - Exibir motivo do atraso em caso de encerramento com atraso
 * Em desenvolvimento:
-    - Cadastro de preços praticados para novas modalidades de transporte
-    - Edição de preços praticados por modalidade de transporte
     - Vinculação automática de um veículo disponível para realizar a entrega e disponibilização do mesmo quando a entrega for concluída.
 
  

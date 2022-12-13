@@ -1,0 +1,10 @@
+pt-BR:        
+  activerecord:
+    models:
+    deadline:
+    attributes:
+     deadline:
+        initial_interval: "Distância inicial do intervalo (Km)"
+        final_interval: "Distância final do intervalo (Km)"
+        duration: "Prazo (dias)"
+        

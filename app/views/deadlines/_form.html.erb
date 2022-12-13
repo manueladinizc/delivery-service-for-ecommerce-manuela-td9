@@ -1,0 +1,36 @@
+<% if(@deadline_id.errors.any?) %>
+  <div class="alertField">
+    <div class = "alert alert-warning">
+    <p>Verifique os erros abaixo:</p>
+    <% @deadline_id.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+    <% end %>
+    </div>
+  </div>
+<% end %>
+
+<%= form_for [@modality, @deadline_id ] do |f| %>
+
+   <div class="container-form-modality">
+        <div class="form-group col-md-6">
+        <%= f.label :initial_interval %>
+        <%= f.text_field :initial_interval, { class: "form-control", placeholder: "Distância inicial" } %>
+        </div>
+        <div class="form-group col-md-6">
+        <%= f.label :final_interval %>
+        <%= f.number_field :final_interval, { class: "form-control", placeholder: "Distância final" } %>
+        </div>
+        <div class="form-group col-md-6">
+        <%= f.label :duration %>
+        <%= f.number_field :duration, { class: "form-control", placeholder: "Prazo" } %>
+        </div>
+        
+        <div class="btn-form-modality">
+        <%= f.submit 'Gravar', class: "btn btn-primary" %>
+        </div>
+    </div>
+
+<% end %>
+
+
+

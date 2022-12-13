@@ -11,11 +11,11 @@ class DistancePrice < ApplicationRecord
 
   def create_interval
     distance_prices = DistancePrice.where(modality_id: self.modality_id)
-    distance_prices.each do |w|
-      if (self.initial_distance.present? && self.initial_distance >= w.initial_distance && self.initial_distance <= w.final_distance)
+    distance_prices.each do |d|
+      if (self.initial_distance.present? && self.initial_distance >= d.initial_distance && self.initial_distance <= d.final_distance)
         self.errors.add(:initial_distance, "já está contido em um intervalo")
       end
-      if (self.final_distance.present? && self.final_distance >= w.initial_distance && self.final_distance <= w.final_distance)
+      if (self.final_distance.present? && self.final_distance >= d.initial_distance && self.final_distance <= d.final_distance)
         self.errors.add(:final_distance, "já está contido em um intervalo")
       end
     end
@@ -29,8 +29,8 @@ class DistancePrice < ApplicationRecord
     if initial_distance_changed?
       if (self.initial_distance.present? && self.initial_distance > distance_price_self[0]['initial_distance'] && self.initial_distance < distance_price_self[0]['final_distance'])
       else
-        distance_prices_all.each do |w|
-          if (self.initial_distance.present? && self.initial_distance >= w.initial_distance && self.initial_distance <= w.final_distance)
+        distance_prices_all.each do |d|
+          if (self.initial_distance.present? && self.initial_distance >= d.initial_distance && self.initial_distance <= d.final_distance)
             self.errors.add(:initial_distance, "já está contido em um intervalo")
           end
         end
@@ -40,8 +40,8 @@ class DistancePrice < ApplicationRecord
     if final_distance_changed?
       if (self.final_distance.present? && self.final_distance <distance_price_self[0]['final_distance'] && self.final_distance >  distance_price_self[0]['initial_distance'])
       else
-        distance_prices_all.each do |w|
-          if (self.final_distance.present? && self.final_distance >= w.initial_distance && self.final_distance <= w.final_distance)
+        distance_prices_all.each do |d|
+          if (self.final_distance.present? && self.final_distance >= d.initial_distance && self.final_distance <= d.final_distance)
             self.errors.add(:final_distance, "já está contido em um intervalo")
           end
         end
